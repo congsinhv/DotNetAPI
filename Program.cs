@@ -2,6 +2,7 @@ using dotenv.net;
 using DotnetAPIProject.Data;
 using DotnetAPIProject.Services.Implementations;
 using DotnetAPIProject.Services.Interfaces;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -105,6 +106,22 @@ builder.Services.AddScoped<IWorkspaceService, WorkspaceService>();
 // Add OpenAPI
 builder.Services.AddOpenApi();
 
+// Add CORS policy
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(
+        "AllowAll",
+        policy =>
+        {
+            policy
+                .SetIsOriginAllowed(_ => true) // Allow any origin
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials();
+        }
+    );
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -114,6 +131,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+// Enable CORS
+app.UseCors("AllowAll");
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
