@@ -1,7 +1,7 @@
-using Microsoft.AspNetCore.Mvc;
-using DotnetAPIProject.Services.Interfaces;
 using DotnetAPIProject.Models.DTOs;
 using DotnetAPIProject.Models.Entities;
+using DotnetAPIProject.Services.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 
 namespace DotnetAPIProject.Controllers;
 
@@ -16,24 +16,8 @@ public class DictionaryController : ControllerBase
         _dictionaryService = dictionaryService;
     }
 
-    [HttpPost]
-    public async Task<string> CreateDictionaryItem(DictionaryItemDto itemDto)
-    {
-        var item = await _dictionaryService.CreateAsync(itemDto);
-        return "Hello World";
-    }
-
-    [HttpGet]
-    public string GET()
-    {
-        return "Hello World";
-    }
-    [HttpDelete]
-    public string DELETE()
-    {
-        //  logic service
-        // oke?
-        return "Deleted";
-    }
+    // TODO: Implement the rest of the endpoints
+    // GET /api/v1/dictionary/{id}
+    // PUT /api/v1/dictionary/{id}
+    // DELETE /api/v1/dictionary/{id}
 }
-
