@@ -7,4 +7,4 @@ public class DictionaryItem
     public required string Definition { get; set; }
     public int WorkspaceId { get; set; }
     public required Workspace Workspace { get; set; }
-} 
+}
