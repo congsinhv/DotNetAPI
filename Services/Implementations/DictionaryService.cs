@@ -34,10 +34,10 @@ public class DictionaryService : IDictionaryService
         return dictionaryItem;
     }
 
-    public async Task<IEnumerable<DictionaryItem>> GetAllAsync()
-    {
-        return await _context.DictionaryItems.Include(d => d.Workspace).ToListAsync();
-    }
+        public async Task<IEnumerable<DictionaryItem>> GetAllAsync()
+        {
+            return await _context.DictionaryItems.Include(d => d.Workspace).ToListAsync();
+        }
 
     public async Task<DictionaryItem?> GetByIdAsync(int id)
     {

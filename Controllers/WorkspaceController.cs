@@ -27,13 +27,21 @@ public class WorkspaceController : ControllerBase
     public async Task<ActionResult<Workspace>> CreateWorkspace(WorkspaceDto workspaceDto)
     {
         var workspace = await _workspaceService.AddWorkspaceAsync(workspaceDto);
-        return CreatedAtAction(nameof(GetWorkspaces), new { id = workspace.Id }, workspace);
+        return CreatedAtAction(nameof(GetWorkspaces ), new { id = workspace.Id }, workspace);
     }
 
     [HttpPut("{id}")]
     public async Task<ActionResult<Workspace>> UpdateWorkspace(int id, WorkspaceDto workspaceDto)
     {
         var workspace = await _workspaceService.UpdateWorkspaceAsync(id, workspaceDto);
+        return Ok(workspace);
+    }
+
+    [HttpDelete("{id}")]
+
+    public async Task<ActionResult<Workspace>> DeleteWorkspace(int id)
+    {
+        var workspace = await _workspaceService.DeleteWorkspaceAsync(id);
         return Ok(workspace);
     }
 

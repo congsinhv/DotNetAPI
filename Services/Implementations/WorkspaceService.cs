@@ -46,4 +46,14 @@ public class WorkspaceService : IWorkspaceService
         await _context.SaveChangesAsync();
         return workspace;
     }
+
+    public async Task<Workspace?> DeleteWorkspaceAsync(int id)
+    {
+        var workspace = await _context.Workspaces.FindAsync(id);
+        if (workspace == null)
+            return null;
+         _context.Workspaces.Remove(workspace);
+        await _context.SaveChangesAsync();
+        return workspace;
+    }
 }

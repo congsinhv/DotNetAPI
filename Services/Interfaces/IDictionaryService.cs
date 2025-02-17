@@ -5,6 +5,7 @@ namespace DotnetAPIProject.Services.Interfaces;
 
 public interface IDictionaryService
 {
+
     Task<DictionaryItem> CreateAsync(DictionaryItemDto item);
     Task<IEnumerable<DictionaryItem>> GetAllAsync();
     Task<DictionaryItem?> GetByIdAsync(int id);
