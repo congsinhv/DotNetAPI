@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "D:\\H\u1ECDc CNTT\\api\\DotNetAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|d:\\h\u1ECDc cntt\\api\\dotnetapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|d:\\h\u1ECDc cntt\\api\\dotnetapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|d:\\h\u1ECDc cntt\\api\\dotnetapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|d:\\h\u1ECDc cntt\\api\\dotnetapi\\services\\implementations\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:services\\implementations\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|d:\\h\u1ECDc cntt\\api\\dotnetapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|d:\\h\u1ECDc cntt\\api\\dotnetapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|d:\\h\u1ECDc cntt\\api\\dotnetapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|d:\\h\u1ECDc cntt\\api\\dotnetapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|d:\\h\u1ECDc cntt\\api\\dotnetapi\\services\\implementations\\forgotpasswordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:services\\implementations\\forgotpasswordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,21 +34,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 11,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\H\u1ECDc CNTT\\api\\DotNetAPI\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\H\u1ECDc CNTT\\api\\DotNetAPI\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T11:58:20.191Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -75,52 +66,78 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
+              "Title": "ForgotPasswordService.cs",
+              "DocumentMoniker": "D:\\H\u1ECDc CNTT\\api\\DotNetAPI\\Services\\Implementations\\ForgotPasswordService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\ForgotPasswordService.cs",
+              "ToolTip": "D:\\H\u1ECDc CNTT\\api\\DotNetAPI\\Services\\Implementations\\ForgotPasswordService.cs",
+              "RelativeToolTip": "Services\\Implementations\\ForgotPasswordService.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAADwvxcAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T12:17:42.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\H\u1ECDc CNTT\\api\\DotNetAPI\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\H\u1ECDc CNTT\\api\\DotNetAPI\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T11:58:20.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\H\u1ECDc CNTT\\api\\DotNetAPI\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\H\u1ECDc CNTT\\api\\DotNetAPI\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAABgAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T11:05:26.636Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\H\u1ECDc CNTT\\api\\DotNetAPI\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "D:\\H\u1ECDc CNTT\\api\\DotNetAPI\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAwBsAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-02-19T11:07:06.43Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "LoginService.cs",
               "DocumentMoniker": "D:\\H\u1ECDc CNTT\\api\\DotNetAPI\\Services\\Implementations\\LoginService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\LoginService.cs",
-              "ToolTip": "D:\\H\u1ECDc CNTT\\api\\DotNetAPI\\Services\\Implementations\\LoginService.cs",
-              "RelativeToolTip": "Services\\Implementations\\LoginService.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAYwA4AAAAPAAAAAAAAAA==",
+              "ToolTip": "D:\\H\u1ECDc CNTT\\api\\DotNetAPI\\Services\\Implementations\\LoginService.cs*",
+              "RelativeToolTip": "Services\\Implementations\\LoginService.cs*",
+              "ViewState": "AgIAACAAAAAAAAAAAAAQwC8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T11:03:18.106Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "LoginController.cs",
               "DocumentMoniker": "D:\\H\u1ECDc CNTT\\api\\DotNetAPI\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
               "ToolTip": "D:\\H\u1ECDc CNTT\\api\\DotNetAPI\\Controllers\\LoginController.cs",
               "RelativeToolTip": "Controllers\\LoginController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAACQAAABrAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAswCUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T11:01:32.61Z",
               "EditorCaption": ""

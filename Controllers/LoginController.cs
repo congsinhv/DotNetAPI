@@ -23,7 +23,7 @@ namespace DotnetAPIProject.Controllers
             var login = await _iLoginService.GetLoginAsync();
             return Ok(login);
         }
-      
+
         [HttpPost("Login")]
         public async Task<IActionResult> CheckLogin([FromBody] LoginDto loginDto)
         {
@@ -34,12 +34,9 @@ namespace DotnetAPIProject.Controllers
                     return BadRequest(ModelState);
                 }
 
-                //var account = await _iLoginService.CheckLoginAsync(loginDto.UserName, loginDto.Password);
+                var account = await _iLoginService.CheckLoginAsync(loginDto.UserName, loginDto.Password);
 
-                //return Ok(new { message = "Đăng nhập thành công", account });
-                var tokenResponse = await _iLoginService.CheckLoginAsync(loginDto.UserName, loginDto.Password);
-                return Ok(tokenResponse);
-
+                return Ok(new { message = "Đăng nhập thành công", account });
             }
             catch (ArgumentException ex)
             {
@@ -47,7 +44,7 @@ namespace DotnetAPIProject.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, new { message = "Lỗi hệ thống!", error = ex.Message });
+                return StatusCode(500, new { message = "Lỗi hệ thống controller!", error = ex.Message });
             }
         }
 

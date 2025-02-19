@@ -3,8 +3,6 @@ using DotnetAPIProject.Models.DTOs;
 using DotnetAPIProject.Models.Entities;
 using DotnetAPIProject.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using BCrypt.Net;
-
 
 namespace DotnetAPIProject.Services.Implementations
 {
@@ -16,15 +14,25 @@ namespace DotnetAPIProject.Services.Implementations
         {
             _context = context;
         }
-      
+
         // code
         public async Task<IEnumerable<Account>> GetLoginAsync()
         {
             return await _context.Accounts.ToListAsync();
         }
+        //public async Task<Account?> CheckLoginAsync(string userName, string password)
+        //{
+        //    var account = await _context.Accounts
+        //        .FirstOrDefaultAsync(a => a.UserName == userName);
 
-      
-        public async Task<JwtDto> CheckLoginAsync(string userName, string password)
+        //    if (account == null || account.Password != password)
+        //    {
+        //        return null; 
+        //    }
+
+        //    return account;
+        //}
+        public async Task<Account> CheckLoginAsync(string userName, string password)
         {
             var account = await _context.Accounts.FirstOrDefaultAsync(a => a.UserName == userName);
 
@@ -38,13 +46,9 @@ namespace DotnetAPIProject.Services.Implementations
             {
                 throw new ArgumentException("Sai mật khẩu!");
             }
-            // Tạo JWT Token
-            var tokenResponse = _jwtService.GenerateToken(account.UserName);
 
-            return tokenResponse;
-            //return account;
+            return account;
         }
-
 
 
         public Task<Account> CheckLoginAsync(string userName, AccountDto account)
@@ -52,18 +56,6 @@ namespace DotnetAPIProject.Services.Implementations
             throw new NotImplementedException();
         }
 
-        Task<Account?> ILoginService.CheckLoginAsync(string userName, string password)
-        {
-            throw new NotImplementedException();
-        }
-
-        private readonly IJwtService _jwtService;
-
-        public LoginService(ApplicationDbContext context, IJwtService jwtService)
-        {
-            _context = context;
-            _jwtService = jwtService;
-        }
 
     }
 }
