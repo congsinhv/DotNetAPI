@@ -1,0 +1,6 @@
+obj/
+FileContentIndex
+# Environment Files
+.env
+.env.local
+.env.*.local
