@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace DotnetAPIProject.Models.Entities;
 
 public class DictionaryItem
@@ -5,6 +7,7 @@ public class DictionaryItem
     public int Id { get; set; }
     public required string Word { get; set; }
     public required string Definition { get; set; }
+
     public int WorkspaceId { get; set; }
-    public required Workspace Workspace { get; set; }
+  //  public Workspace Workspace { get; set; }
 }
