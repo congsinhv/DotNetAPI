@@ -24,9 +24,6 @@ public class DictionaryController : ControllerBase
         return Ok(dictionarys);
     }
 
-
-    
-
     [HttpPost]
 
     public async Task<ActionResult<DictionaryItem>> CreateDictionary(DictionaryItemDto dictionaryDto)
@@ -42,6 +39,16 @@ public class DictionaryController : ControllerBase
         var dictionary = await _dictionaryService.UpdateAsync(id, dictionaryDto);
         return Ok(dictionary);
     }
+
+
+    [HttpDelete("{id}")]
+
+    public async Task<ActionResult<DictionaryItem>> DeleteAsync(int id)
+    {
+        var dictionary = await _dictionaryService.DeleteAsync(id);
+        return Ok(dictionary);
+    }
+
 
     // TODO: Implement the rest of the endpoints
     // GET /api/v1/dictionary/{id}

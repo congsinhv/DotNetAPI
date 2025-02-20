@@ -22,11 +22,7 @@ public class DictionaryService : IDictionaryService
             Word = item.Word,
             Definition = item.Definition,
             WorkspaceId = item.WorkspaceId,
-            Workspace = new Workspace
-            {
-                Name = item.Workspace.Name,
-                Description = "Default Description",
-            },
+           
         };
 
         _context.DictionaryItems.Add(dictionaryItem);
@@ -34,27 +30,32 @@ public class DictionaryService : IDictionaryService
         return dictionaryItem;
     }
 
-        public async Task<IEnumerable<DictionaryItem>> GetAllAsync()
-        {
-            return await _context.DictionaryItems.Include(d => d.Workspace).ToListAsync();
-        }
+    public async Task<IEnumerable<DictionaryItem>> GetAllAsync()
+    {
+        return await _context.DictionaryItems.ToListAsync();
+    }
+
 
     public async Task<DictionaryItem?> GetByIdAsync(int id)
     {
         return await _context
-            .DictionaryItems.Include(d => d.Workspace)
+            .DictionaryItems
             .FirstOrDefaultAsync(d => d.Id == id);
     }
 
     public async Task<DictionaryItem?> UpdateAsync(int id, DictionaryItemDto item)
     {
         var existingItem = await _context.DictionaryItems.FindAsync(id);
+
+
         if (existingItem == null)
             return null;
 
         existingItem.Word = item.Word;
         existingItem.Definition = item.Definition;
         existingItem.WorkspaceId = item.WorkspaceId;
+
+       
 
         await _context.SaveChangesAsync();
         return existingItem;
