@@ -10,6 +10,13 @@ public class ApplicationDbContext : DbContext
 
     public DbSet<DictionaryItem> DictionaryItems { get; set; } = null!;
     public DbSet<Workspace> Workspaces { get; set; } = null!;
+    public DbSet<ChatHistory> ChatHistories { get; set; } = null!;
+    public DbSet<Account> Accounts { get; set; } = null!;
+
+    public ApplicationDbContext(DbSet<Workspace> workspaces)
+    {
+        Workspaces = workspaces;
+    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -102,6 +102,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(
 // Add Services
 builder.Services.AddScoped<IDictionaryService, DictionaryService>();
 builder.Services.AddScoped<IWorkspaceService, WorkspaceService>();
+builder.Services.AddScoped<IQwenService, QwenService>();
 
 // Add OpenAPI
 builder.Services.AddOpenApi();
