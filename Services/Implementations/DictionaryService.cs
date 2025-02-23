@@ -40,12 +40,12 @@ public class DictionaryService : IDictionaryService
         return await _context.DictionaryItems.ToListAsync();
     }
 
-    public async Task<DictionaryItem?> GetByIdAsync(int id)
+    public async Task<DictionaryItem?> GetByIdAsync(Guid id)
     {
         return await _context.DictionaryItems.FirstOrDefaultAsync(d => d.Id == id);
     }
 
-    public async Task<DictionaryItem?> UpdateAsync(int id, DictionaryItemDto item)
+    public async Task<DictionaryItem?> UpdateAsync(Guid id, DictionaryItemDto item)
     {
         var existingItem = await _context.DictionaryItems.FindAsync(id);
 
@@ -60,7 +60,7 @@ public class DictionaryService : IDictionaryService
         return existingItem;
     }
 
-    public async Task<bool> DeleteAsync(int id)
+    public async Task<bool> DeleteAsync(Guid id)
     {
         var item = await _context.DictionaryItems.FindAsync(id);
         if (item == null)

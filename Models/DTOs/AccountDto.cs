@@ -23,10 +23,16 @@ namespace DotnetAPIProject.Models.DTOs
         [Required(ErrorMessage = "Mật khẩu không được để trống.")]
         [MinLength(8, ErrorMessage = "Mật khẩu phải có ít nhất 8 ký tự.")]
         public required string Password { get; set; }
+    }
+
+    public class AccountLoginDto
+    {
+        [Required(ErrorMessage = "Email không được để trống.")]
+        [EmailAddress(ErrorMessage = "Email không hợp lệ.")]
+        public required string Email { get; set; }
 
         [Required(ErrorMessage = "Mật khẩu không được để trống.")]
-        [MinLength(8, ErrorMessage = "Mật khẩu phải có ít nhất 8 ký tự.")]
-        [Compare("Password", ErrorMessage = "Mật khẩu xác nhận không khớp.")]
-        public required string ConfirmPassword { get; set; }
+        [MinLength(6, ErrorMessage = "Mật khẩu phải có ít nhất 6 ký tự.")]
+        public required string Password { get; set; }
     }
 }

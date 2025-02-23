@@ -32,7 +32,7 @@ namespace DotnetAPIProject.Controllers
         }
 
         [HttpGet("{userId}")]
-        public async Task<IActionResult> GetChatsByUserIdAsync(int userId)
+        public async Task<IActionResult> GetChatsByUserIdAsync(Guid userId)
         {
             var chatHistory = await _chatService.GetChatsByUserIdAsync(userId);
 

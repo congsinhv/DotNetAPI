@@ -45,10 +45,27 @@ namespace DotnetAPIProject.Services.Implementations
                 Email = accountDto.Email,
                 NumberPhone = accountDto.PhoneNumber,
                 Password = hashedPassword,
-                ConfirmPassword = accountDto.ConfirmPassword,
             };
             _context.Accounts.Add(account);
             await _context.SaveChangesAsync(); // Lưu vào database
+
+            return account;
+        }
+
+        public async Task<Account> HandleLoginAsync(string email, string password)
+        {
+            var account = await _context.Accounts.FirstOrDefaultAsync(a => a.Email == email);
+
+            if (account == null)
+            {
+                throw new ArgumentException("Tên tài khoản không tồn tại!");
+            }
+
+            // Dùng BCrypt.Verify() để kiểm tra mật khẩu
+            if (!BCrypt.Net.BCrypt.Verify(password, account.Password))
+            {
+                throw new ArgumentException("Sai mật khẩu!");
+            }
 
             return account;
         }

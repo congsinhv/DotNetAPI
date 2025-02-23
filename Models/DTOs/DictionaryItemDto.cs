@@ -6,7 +6,7 @@ public class DictionaryItemDto
 {
     public required string Word { get; set; }
     public required string Definition { get; set; }
-    public int WorkspaceId { get; set; }
+    public Guid WorkspaceId { get; set; }
 }
 
 public class WordDefinitionDto

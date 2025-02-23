@@ -5,8 +5,10 @@ namespace DotnetAPIProject.Services.Interfaces
 {
     public interface IAccountService
     {
-        Task<IEnumerable<Account>> GetAccountsAsync();
+        // TODO: Should be removed
+        // Task<IEnumerable<Account>> GetAccountsAsync();
+
         Task<Account> AddAccountAsync(AccountDto account);
-        //Task<Workspace?> UpdateWorkspaceAsync(int id, WorkspaceDto workspace);
+        Task<Account> HandleLoginAsync(string email, string password);
     }
 }

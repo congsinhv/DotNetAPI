@@ -129,10 +129,10 @@ builder.Services.AddDbContext<ApplicationDbContext>(
 builder.Services.AddScoped<IDictionaryService, DictionaryService>();
 builder.Services.AddScoped<IWorkspaceService, WorkspaceService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
-builder.Services.AddScoped<ILoginService, LoginService>();
+// builder.Services.AddScoped<ILoginService, LoginService>();
 
 //builder.Services.AddScoped<IForgotPasswordService, ForgotPasswordService>();
-builder.Services.AddScoped<IForgotPasswordService, ForgotPasswordService>();
+// builder.Services.AddScoped<IForgotPasswordService, ForgotPasswordService>();
 builder.Services.AddScoped<IChatService, ChatService>();
 builder.Services.AddHttpClient();
 
