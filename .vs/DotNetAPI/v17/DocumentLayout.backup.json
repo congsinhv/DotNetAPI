@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\BAITAPAPI\\DotNetAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|c:\\baitapapi\\dotnetapi\\services\\implementations\\dictionaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:services\\implementations\\dictionaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|c:\\baitapapi\\dotnetapi\\services\\interfaces\\idictionaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:services\\interfaces\\idictionaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|c:\\baitapapi\\dotnetapi\\models\\entities\\dictionaryitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:models\\entities\\dictionaryitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|c:\\baitapapi\\dotnetapi\\models\\dtos\\dictionaryitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:models\\dtos\\dictionaryitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|c:\\baitapapi\\dotnetapi\\controllers\\workspacecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:controllers\\workspacecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,20 +47,8 @@
       "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:controllers\\dictionarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|c:\\baitapapi\\dotnetapi\\services\\interfaces\\idictionaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:services\\interfaces\\idictionaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|c:\\baitapapi\\dotnetapi\\models\\dtos\\dictionaryitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:models\\dtos\\dictionaryitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|c:\\baitapapi\\dotnetapi\\models\\dtos\\chatdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:models\\dtos\\chatdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|c:\\baitapapi\\dotnetapi\\services\\implementations\\dictionaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:services\\implementations\\dictionaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|c:\\baitapapi\\dotnetapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -74,10 +78,6 @@
       "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:services\\implementations\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|c:\\baitapapi\\dotnetapi\\models\\entities\\dictionaryitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:models\\entities\\dictionaryitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|c:\\baitapapi\\dotnetapi\\models\\entities\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:models\\entities\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -100,7 +100,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -120,59 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "WorkspaceDto.cs",
-              "DocumentMoniker": "C:\\BAITAPAPI\\DotNetAPI\\Models\\DTOs\\WorkspaceDto.cs",
-              "RelativeDocumentMoniker": "Models\\DTOs\\WorkspaceDto.cs",
-              "ToolTip": "C:\\BAITAPAPI\\DotNetAPI\\Models\\DTOs\\WorkspaceDto.cs*",
-              "RelativeToolTip": "Models\\DTOs\\WorkspaceDto.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T06:50:44.264Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Workspace.cs",
-              "DocumentMoniker": "C:\\BAITAPAPI\\DotNetAPI\\Models\\Entities\\Workspace.cs",
-              "RelativeDocumentMoniker": "Models\\Entities\\Workspace.cs",
-              "ToolTip": "C:\\BAITAPAPI\\DotNetAPI\\Models\\Entities\\Workspace.cs",
-              "RelativeToolTip": "Models\\Entities\\Workspace.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T11:33:11.244Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IChatService.cs",
-              "DocumentMoniker": "C:\\BAITAPAPI\\DotNetAPI\\Services\\Interfaces\\IChatService.cs",
-              "RelativeDocumentMoniker": "Services\\Interfaces\\IChatService.cs",
-              "ToolTip": "C:\\BAITAPAPI\\DotNetAPI\\Services\\Interfaces\\IChatService.cs",
-              "RelativeToolTip": "Services\\Interfaces\\IChatService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T06:24:22.797Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "WorkspaceService.cs",
-              "DocumentMoniker": "C:\\BAITAPAPI\\DotNetAPI\\Services\\Implementations\\WorkspaceService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\WorkspaceService.cs",
-              "ToolTip": "C:\\BAITAPAPI\\DotNetAPI\\Services\\Implementations\\WorkspaceService.cs",
-              "RelativeToolTip": "Services\\Implementations\\WorkspaceService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T11:33:21.662Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "IWorkspaceService.cs",
               "DocumentMoniker": "C:\\BAITAPAPI\\DotNetAPI\\Services\\Interfaces\\IWorkspaceService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IWorkspaceService.cs",
@@ -185,20 +133,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "WorkspaceController.cs",
               "DocumentMoniker": "C:\\BAITAPAPI\\DotNetAPI\\Controllers\\WorkspaceController.cs",
               "RelativeDocumentMoniker": "Controllers\\WorkspaceController.cs",
               "ToolTip": "C:\\BAITAPAPI\\DotNetAPI\\Controllers\\WorkspaceController.cs",
               "RelativeToolTip": "Controllers\\WorkspaceController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAIA+wBgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACAAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T11:32:49.206Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "DictionaryController.cs",
               "DocumentMoniker": "C:\\BAITAPAPI\\DotNetAPI\\Controllers\\DictionaryController.cs",
               "RelativeDocumentMoniker": "Controllers\\DictionaryController.cs",
@@ -211,33 +159,111 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "DictionaryItemDto.cs",
               "DocumentMoniker": "C:\\BAITAPAPI\\DotNetAPI\\Models\\DTOs\\DictionaryItemDto.cs",
               "RelativeDocumentMoniker": "Models\\DTOs\\DictionaryItemDto.cs",
               "ToolTip": "C:\\BAITAPAPI\\DotNetAPI\\Models\\DTOs\\DictionaryItemDto.cs",
               "RelativeToolTip": "Models\\DTOs\\DictionaryItemDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T11:33:07.652Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
+              "Title": "DictionaryService.cs",
+              "DocumentMoniker": "C:\\BAITAPAPI\\DotNetAPI\\Services\\Implementations\\DictionaryService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\DictionaryService.cs",
+              "ToolTip": "C:\\BAITAPAPI\\DotNetAPI\\Services\\Implementations\\DictionaryService.cs",
+              "RelativeToolTip": "Services\\Implementations\\DictionaryService.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAswEcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T11:33:18.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "IDictionaryService.cs",
               "DocumentMoniker": "C:\\BAITAPAPI\\DotNetAPI\\Services\\Interfaces\\IDictionaryService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IDictionaryService.cs",
               "ToolTip": "C:\\BAITAPAPI\\DotNetAPI\\Services\\Interfaces\\IDictionaryService.cs",
               "RelativeToolTip": "Services\\Interfaces\\IDictionaryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T11:33:24.96Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DictionaryItem.cs",
+              "DocumentMoniker": "C:\\BAITAPAPI\\DotNetAPI\\Models\\Entities\\DictionaryItem.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\DictionaryItem.cs",
+              "ToolTip": "C:\\BAITAPAPI\\DotNetAPI\\Models\\Entities\\DictionaryItem.cs",
+              "RelativeToolTip": "Models\\Entities\\DictionaryItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T11:33:09.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WorkspaceService.cs",
+              "DocumentMoniker": "C:\\BAITAPAPI\\DotNetAPI\\Services\\Implementations\\WorkspaceService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\WorkspaceService.cs",
+              "ToolTip": "C:\\BAITAPAPI\\DotNetAPI\\Services\\Implementations\\WorkspaceService.cs",
+              "RelativeToolTip": "Services\\Implementations\\WorkspaceService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T11:33:21.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "IChatService.cs",
+              "DocumentMoniker": "C:\\BAITAPAPI\\DotNetAPI\\Services\\Interfaces\\IChatService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IChatService.cs",
+              "ToolTip": "C:\\BAITAPAPI\\DotNetAPI\\Services\\Interfaces\\IChatService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IChatService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T06:24:22.797Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Workspace.cs",
+              "DocumentMoniker": "C:\\BAITAPAPI\\DotNetAPI\\Models\\Entities\\Workspace.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\Workspace.cs",
+              "ToolTip": "C:\\BAITAPAPI\\DotNetAPI\\Models\\Entities\\Workspace.cs",
+              "RelativeToolTip": "Models\\Entities\\Workspace.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T11:33:11.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WorkspaceDto.cs",
+              "DocumentMoniker": "C:\\BAITAPAPI\\DotNetAPI\\Models\\DTOs\\WorkspaceDto.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\WorkspaceDto.cs",
+              "ToolTip": "C:\\BAITAPAPI\\DotNetAPI\\Models\\DTOs\\WorkspaceDto.cs",
+              "RelativeToolTip": "Models\\DTOs\\WorkspaceDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T06:50:44.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "ChatDto.cs",
               "DocumentMoniker": "C:\\BAITAPAPI\\DotNetAPI\\Models\\DTOs\\ChatDto.cs",
               "RelativeDocumentMoniker": "Models\\DTOs\\ChatDto.cs",
@@ -250,20 +276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DictionaryService.cs",
-              "DocumentMoniker": "C:\\BAITAPAPI\\DotNetAPI\\Services\\Implementations\\DictionaryService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\DictionaryService.cs",
-              "ToolTip": "C:\\BAITAPAPI\\DotNetAPI\\Services\\Implementations\\DictionaryService.cs",
-              "RelativeToolTip": "Services\\Implementations\\DictionaryService.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAkwDUAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T11:33:18.383Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\BAITAPAPI\\DotNetAPI\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
@@ -276,7 +289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "ChatController.cs",
               "DocumentMoniker": "C:\\BAITAPAPI\\DotNetAPI\\Controllers\\ChatController.cs",
               "RelativeDocumentMoniker": "Controllers\\ChatController.cs",
@@ -289,7 +302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\BAITAPAPI\\DotNetAPI\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -302,7 +315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": ".env.example",
               "DocumentMoniker": "C:\\BAITAPAPI\\DotNetAPI\\.env.example",
               "RelativeDocumentMoniker": ".env.example",
@@ -315,7 +328,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": ".env",
               "DocumentMoniker": "C:\\BAITAPAPI\\DotNetAPI\\.env",
               "RelativeDocumentMoniker": ".env",
@@ -328,7 +341,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\AppData\\Local\\SourceServer\\8637dd68fb82a2423abf9fac4470a17fafd56782bdb10a5109cb221a3a5db7a9\\Program.cs",
               "RelativeDocumentMoniker": "..\\..\\Users\\ADMIN\\AppData\\Local\\SourceServer\\8637dd68fb82a2423abf9fac4470a17fafd56782bdb10a5109cb221a3a5db7a9\\Program.cs",
@@ -341,13 +354,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "ChatService.cs",
               "DocumentMoniker": "C:\\BAITAPAPI\\DotNetAPI\\Services\\Implementations\\ChatService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\ChatService.cs",
               "ToolTip": "C:\\BAITAPAPI\\DotNetAPI\\Services\\Implementations\\ChatService.cs",
               "RelativeToolTip": "Services\\Implementations\\ChatService.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAwwEQAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAwwEUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-23T06:19:42.717Z",
               "EditorCaption": ""
@@ -363,19 +376,6 @@
               "ViewState": "AgIAACAAAAAAAAAAAAAswA4AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-23T06:15:02.065Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "DictionaryItem.cs",
-              "DocumentMoniker": "C:\\BAITAPAPI\\DotNetAPI\\Models\\Entities\\DictionaryItem.cs",
-              "RelativeDocumentMoniker": "Models\\Entities\\DictionaryItem.cs",
-              "ToolTip": "C:\\BAITAPAPI\\DotNetAPI\\Models\\Entities\\DictionaryItem.cs",
-              "RelativeToolTip": "Models\\Entities\\DictionaryItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T11:33:09.592Z",
               "EditorCaption": ""
             },
             {
