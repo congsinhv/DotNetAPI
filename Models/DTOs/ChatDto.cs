@@ -10,6 +10,8 @@ namespace DotnetAPIProject.Models.DTOs
     {
         public string Role { get; set; }
         public string Content { get; set; }
-        public Guid ChatId { get; set; }
+        public Guid? ChatId { get; set; }
+
+        public int? UserId { get; set; }
     }
 }

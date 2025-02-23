@@ -26,6 +26,7 @@ public class ChatService : IChatService
     {
         var newChat = new Chat
         {
+            Id = Guid.NewGuid(),
             UserId = chat.UserId,
             Title =  "Đoạn chat mới",
             CreatedAt = DateTime.Now,
@@ -41,7 +42,7 @@ public class ChatService : IChatService
         {
             Role = detail.Role,
             Content = detail.Content,
-            ChatId = detail.ChatId,
+            ChatId = detail.ChatId ?? Guid.Empty,
             CreatedAt = DateTime.Now,
         };
 
@@ -120,12 +121,25 @@ public class ChatService : IChatService
 
     public async Task<DetailChat> PostRequestChat(DetailChatDto request)
     {
+       // Chắc chắn rằng ChatId được tạo
+        if (!request.ChatId.HasValue)
+        {
+            if (!request.UserId.HasValue)
+            {
+                throw new ArgumentNullException(nameof(request.UserId), "UserId không được để trống");
+            }
+            var newChat = await CreateChatAsync(new ChatDto { UserId = request.UserId.Value });
+            request.ChatId = newChat.Id;
+
+        }
+
         // Thêm vào database DetailChat
         await CreateDetailChatAsync(request);
 
+        System.Console.WriteLine("Request: " + request.Content);
         var requestBody = new
         {
-            model = "qwen/qwen2.5-vl-72b-instruct:free",
+            model = "google/learnlm-1.5-pro-experimental:free",
             messages = new[]
             {
                 new
@@ -140,12 +154,12 @@ public class ChatService : IChatService
         };
 
         string jsonContent = JsonSerializer.Serialize(requestBody);
-
+        string OPENROUTER_API_KEY = Environment.GetEnvironmentVariable("OPENROUTER_API_KEY");
         var httpRequest = new HttpRequestMessage(HttpMethod.Post, "https://openrouter.ai/api/v1/chat/completions")
         {
             Headers =
             {
-                { "Authorization", "Bearer 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" },
+                { "Authorization", $"Bearer {OPENROUTER_API_KEY}" },
                 { "Accept", "application/json" }
             },
             Content = new StringContent(jsonContent, Encoding.UTF8, "application/json")
@@ -153,7 +167,7 @@ public class ChatService : IChatService
 
         HttpResponseMessage response = await client.SendAsync(httpRequest);
         string responseContent = await response.Content.ReadAsStringAsync();
-
+        System.Console.WriteLine("Response: " + responseContent);
         using JsonDocument doc = JsonDocument.Parse(responseContent);
         JsonElement root = doc.RootElement;
         string content = root.GetProperty("choices")[0].GetProperty("message").GetProperty("content").GetString();
@@ -165,8 +179,9 @@ public class ChatService : IChatService
             Role = "Ai",
             ChatId = request.ChatId
         };
-
+        System.Console.WriteLine("Response: " + content);
         var endReponse = await CreateDetailChatAsync(newReponseDetailChat);
+
 
         return endReponse;
     }

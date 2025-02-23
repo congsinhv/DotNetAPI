@@ -17,7 +17,7 @@ public class WorkspaceController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Workspace>>> GetWorkspaces()
+    public async Task<ActionResult<IEnumerable<WorkspaceResponse>>> GetWorkspaces()
     {
         var workspaces = await _workspaceService.GetWorkspacesAsync();
         return Ok(workspaces);
