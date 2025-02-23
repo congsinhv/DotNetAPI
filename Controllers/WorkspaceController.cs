@@ -37,6 +37,13 @@ public class WorkspaceController : ControllerBase
         return Ok(workspace);
     }
 
+    [HttpDelete("{id}")]
+    public async Task<ActionResult<Workspace>> DeleteWorkspace(int id)
+    {
+        var workspace = await _workspaceService.DeleteWorkspaceAsync(id);
+        return Ok(workspace);
+    }
+
     // TODO: Implement the rest of the endpoints
     // GET /api/v1/workspaces/{id}
     // DELETE /api/v1/workspaces/{id}

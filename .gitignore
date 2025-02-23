@@ -1,6 +1,16 @@
-obj/
+# Binaries and build output
+[Bb]in/
+**/[Bb]in/
+**/[Bb]in/*
+[Oo]bj/
+**/[Oo]bj/
+**/[Oo]bj/*
 FileContentIndex
 # Environment Files
 .env
 .env.local
 .env.*.local
+
+
+# Cursor
+.cursor/

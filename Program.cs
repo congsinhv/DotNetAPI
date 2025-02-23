@@ -1,13 +1,14 @@
+using System.Text;
 using dotenv.net;
 using DotnetAPIProject.Data;
 using DotnetAPIProject.Services.Implementations;
 using DotnetAPIProject.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using System.Text;
 
 // Load environment variables from .env file
 DotEnv.Load(options: new DotEnvOptions(probeLevelsToSearch: 3));
@@ -23,6 +24,7 @@ builder.Logging.AddDebug();
 var logger = LoggerFactory.Create(builder => builder.AddConsole()).CreateLogger<Program>();
 
 logger.LogInformation("Starting application...");
+
 //// cauas hinh
 //builder.Services.AddAuthentication(options =>
 //{
@@ -128,8 +130,11 @@ builder.Services.AddScoped<IDictionaryService, DictionaryService>();
 builder.Services.AddScoped<IWorkspaceService, WorkspaceService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<ILoginService, LoginService>();
+
 //builder.Services.AddScoped<IForgotPasswordService, ForgotPasswordService>();
 builder.Services.AddScoped<IForgotPasswordService, ForgotPasswordService>();
+builder.Services.AddScoped<IChatService, ChatService>();
+builder.Services.AddHttpClient();
 
 //builder.Services.AddScoped<IJwtService, JwtService>();
 
@@ -137,6 +142,22 @@ builder.Services.AddScoped<IForgotPasswordService, ForgotPasswordService>();
 
 // Add OpenAPI
 builder.Services.AddOpenApi();
+
+// Add CORS policy
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(
+        "AllowAll",
+        policy =>
+        {
+            policy
+                .SetIsOriginAllowed(_ => true) // Allow any origin
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials();
+        }
+    );
+});
 
 var app = builder.Build();
 
@@ -147,6 +168,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+// Enable CORS
+app.UseCors("AllowAll");
 
 app.UseHttpsRedirection();
 app.UseAuthorization();

@@ -17,8 +17,17 @@ public class WorkspaceService : IWorkspaceService
 
     public async Task<IEnumerable<Workspace>> GetWorkspacesAsync()
     {
-        // string sqlString = "SELECT * FROM Workspaces";
-        return await _context.Workspaces.ToListAsync();
+        var workspaces = await _context
+            .Workspaces.Select(w => new Workspace
+            {
+                Id = w.Id,
+                Name = w.Name,
+                Description = w.Description,
+                WordCount = _context.DictionaryItems.Count(di => di.WorkspaceId == w.Id),
+            })
+            .ToListAsync();
+
+        return workspaces;
     }
 
     public async Task<Workspace> AddWorkspaceAsync(WorkspaceDto workspaceDto)
@@ -43,6 +52,16 @@ public class WorkspaceService : IWorkspaceService
         workspace.Name = workspaceDto.Name;
         workspace.Description = workspaceDto.Description;
 
+        await _context.SaveChangesAsync();
+        return workspace;
+    }
+
+    public async Task<Workspace?> DeleteWorkspaceAsync(int id)
+    {
+        var workspace = await _context.Workspaces.FindAsync(id);
+        if (workspace == null)
+            return null;
+        _context.Workspaces.Remove(workspace);
         await _context.SaveChangesAsync();
         return workspace;
     }
