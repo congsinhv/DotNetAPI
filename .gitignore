@@ -11,3 +11,6 @@ FileContentIndex
 .env.local
 .env.*.local
 
+
+# Cursor
+.cursor/
