@@ -1,5 +1,9 @@
 using DotnetAPIProject.Models.DTOs;
 using DotnetAPIProject.Models.Entities;
+using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
+using DotnetAPIProject.Models;
+using DotnetAPIProject.Services.Implementations;
 
 namespace DotnetAPIProject.Services.Interfaces;
 
@@ -10,5 +14,5 @@ public interface IDictionaryService
     Task<DictionaryItem?> GetByIdAsync(int id);
     Task<DictionaryItem?> UpdateAsync(int id, DictionaryItemDto item);
     Task<bool> DeleteAsync(int id);
-    Task<string> GetWordDefinitionAsync(string word);
+    Task<DictionaryItemDto> GetWordDefinitionAsync(string word);
 }

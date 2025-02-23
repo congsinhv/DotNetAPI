@@ -1,4 +1,4 @@
-using System.Net.Http;
+﻿using System.Net.Http;
 using System.Text.Json;
 using DotnetAPIProject.Data;
 using DotnetAPIProject.Models.DTOs;
@@ -12,12 +12,16 @@ public class DictionaryService : IDictionaryService
 {
     private readonly ApplicationDbContext _context;
     private readonly string _baseUrl;
+    private readonly HttpClient _httpClient;
+
     private readonly IHttpClientFactory _httpClientFactory;
 
-    public DictionaryService(ApplicationDbContext context, IHttpClientFactory httpClientFactory)
+    public DictionaryService(IConfiguration configuration, HttpClient httpClient)
     {
-        _context = context;
-        _httpClientFactory = httpClientFactory;
+        //_context = context;
+        _httpClient = httpClient;
+        //_httpClientFactory = httpClientFactory;
+
         _baseUrl = Environment.GetEnvironmentVariable("OXFORD_DICTIONARY_BASE_URL") ?? "dummy";
     }
 
@@ -71,19 +75,78 @@ public class DictionaryService : IDictionaryService
         return true;
     }
 
-    public async Task<string> GetWordDefinitionAsync(string word)
+    public async Task<DictionaryItemDto> GetWordDefinitionAsync(string word)
     {
-        using var httpClient = _httpClientFactory.CreateClient();
         var url = $"{_baseUrl}/entries/en/{word.ToLower()}";
+        var response = await _httpClient.GetAsync(url);
 
-        var response = await httpClient.GetAsync(url);
         if (!response.IsSuccessStatusCode)
         {
-            throw new HttpRequestException($"Error calling Oxford API: {response.StatusCode}");
+            throw new HttpRequestException($"Oxford API trả về lỗi: {response.StatusCode}");
         }
 
         var jsonResponse = await response.Content.ReadAsStringAsync();
-        using var doc = JsonDocument.Parse(jsonResponse);
-        return doc.RootElement.ToString();
+        var jsonElements = JsonDocument.Parse(jsonResponse).RootElement;
+
+        var result = new DictionaryItemDto
+        {
+            Word = jsonElements[0].GetProperty("word").GetString(),
+            Phonetic = jsonElements[0].TryGetProperty("phonetic", out var phonetic) ? phonetic.GetString() : "",
+            Phonetics = new List<DictionaryItemDto.PhoneticDTO>(),
+            Meanings = new List<DictionaryItemDto.MeaningDTO>()
+        };
+
+        if (jsonElements[0].TryGetProperty("phonetics", out var phonetics))
+        {
+            foreach (var item in phonetics.EnumerateArray())
+            {
+                result.Phonetics.Add(new    DictionaryItemDto.PhoneticDTO
+                {
+                    Text = item.TryGetProperty("text", out var text) ? text.GetString() : "",
+                    Audio = item.TryGetProperty("audio", out var audio) ? audio.GetString() : ""
+                });
+            }
+        }
+
+        if (jsonElements[0].TryGetProperty("meanings", out var meanings))
+        {
+            foreach (var meaning in meanings.EnumerateArray())
+            {
+                var meaningDto = new DictionaryItemDto.MeaningDTO
+                {
+                    PartOfSpeech = meaning.GetProperty("partOfSpeech").GetString(),
+                    Definitions = new List<DictionaryItemDto.DefinitionDTO>(),
+                    Synonyms = new List<string>(),
+                    Antonyms = new List<string>()
+                };
+
+                foreach (var definition in meaning.GetProperty("definitions").EnumerateArray())
+                {
+                    meaningDto.Definitions.Add(new DictionaryItemDto.DefinitionDTO
+                    {
+                        Definitional = definition.GetProperty("definition").GetString(),
+                        Example = definition.TryGetProperty("example", out var example) ? example.GetString() : "",
+                        Synonyms = definition.TryGetProperty("synonyms", out var synonyms)
+                            ? JsonSerializer.Deserialize<List<string>>(synonyms.GetRawText())
+                            : new List<string>(),
+                        Antonyms = definition.TryGetProperty("antonyms", out var antonyms)
+                            ? JsonSerializer.Deserialize<List<string>>(antonyms.GetRawText())
+                            : new List<string>()
+                    });
+                }
+
+                meaningDto.Synonyms = meaning.TryGetProperty("synonyms", out var mainSynonyms)
+                    ? JsonSerializer.Deserialize<List<string>>(mainSynonyms.GetRawText())
+                    : new List<string>();
+
+                meaningDto.Antonyms = meaning.TryGetProperty("antonyms", out var mainAntonyms)
+                    ? JsonSerializer.Deserialize<List<string>>(mainAntonyms.GetRawText())
+                    : new List<string>();
+
+                result.Meanings.Add(meaningDto);
+            }
+        }
+
+        return result;
     }
 }

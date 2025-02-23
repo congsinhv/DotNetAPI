@@ -18,20 +18,29 @@ public class DictionaryController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<DictionaryItem>>> GetDictionary()
+    public async Task<ActionResult<DictionaryItemDto>> GetDefinition(string word)
     {
-        var dictionarys = await _dictionaryService.GetAllAsync();
-        return Ok(dictionarys);
-    }
+        if (string.IsNullOrWhiteSpace(word))
+            return BadRequest("Word cannot be empty.");
 
-    [HttpPost]
-    public async Task<ActionResult<DictionaryItem>> CreateDictionary(
-        DictionaryItemDto dictionaryDto
-    )
-    {
-        var dictionnary = await _dictionaryService.CreateAsync(dictionaryDto);
-        return CreatedAtAction(nameof(GetDictionary), new { id = dictionnary.Id }, dictionnary);
+        try
+        {
+            var definition = await _dictionaryService.GetWordDefinitionAsync(word);
+            return Ok(definition);
+        }
+        catch (HttpRequestException ex)
+        {
+            return StatusCode(StatusCodes.Status503ServiceUnavailable, "Error calling Oxford API: " + ex.Message);
+        }
     }
+    //[HttpPost]
+    //public async Task<ActionResult<DictionaryItem>> CreateDictionary(
+    //    DictionaryItemDto dictionaryDto
+    //)
+    //{
+    //    var dictionnary = await _dictionaryService.CreateAsync(dictionaryDto);
+    //    return CreatedAtAction(nameof(GetDictionary), new { id = dictionnary.Id }, dictionnary);
+    //}
 
     [HttpPost("word-definition")]
     public async Task<ActionResult<DictionaryItem>> GetWordDefinition(
