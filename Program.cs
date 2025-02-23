@@ -99,6 +99,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(
     }
 );
 
+// Add HttpClient services - place this before registering other services
+builder.Services.AddHttpClient();
+
 // Add Services
 builder.Services.AddScoped<IDictionaryService, DictionaryService>();
 builder.Services.AddScoped<IWorkspaceService, WorkspaceService>();
