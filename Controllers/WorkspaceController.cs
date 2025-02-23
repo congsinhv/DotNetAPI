@@ -27,7 +27,7 @@ public class WorkspaceController : ControllerBase
     public async Task<ActionResult<Workspace>> CreateWorkspace(WorkspaceDto workspaceDto)
     {
         var workspace = await _workspaceService.AddWorkspaceAsync(workspaceDto);
-        return CreatedAtAction(nameof(GetWorkspaces ), new { id = workspace.Id }, workspace);
+        return CreatedAtAction(nameof(GetWorkspaces), new { id = workspace.Id }, workspace);
     }
 
     [HttpPut("{id}")]
@@ -38,7 +38,6 @@ public class WorkspaceController : ControllerBase
     }
 
     [HttpDelete("{id}")]
-
     public async Task<ActionResult<Workspace>> DeleteWorkspace(int id)
     {
         var workspace = await _workspaceService.DeleteWorkspaceAsync(id);

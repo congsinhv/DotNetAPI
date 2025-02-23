@@ -9,6 +9,4 @@ public interface IWorkspaceService
     Task<Workspace> AddWorkspaceAsync(WorkspaceDto workspace);
     Task<Workspace?> UpdateWorkspaceAsync(int id, WorkspaceDto workspace);
     Task<Workspace> DeleteWorkspaceAsync(int id);
-    
-  
 }
