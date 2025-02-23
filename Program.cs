@@ -1,9 +1,13 @@
+using System.Text;
 using dotenv.net;
 using DotnetAPIProject.Data;
 using DotnetAPIProject.Services.Implementations;
 using DotnetAPIProject.Services.Interfaces;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 
 // Load environment variables from .env file
@@ -21,6 +25,28 @@ var logger = LoggerFactory.Create(builder => builder.AddConsole()).CreateLogger<
 
 logger.LogInformation("Starting application...");
 
+//// cauas hinh
+//builder.Services.AddAuthentication(options =>
+//{
+//    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+//    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+//    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+//}).AddJwtBearer(options =>
+//{
+//    options.RequireHttpsMetadata = false;
+//    options.SaveToken = true;
+//    options.TokenValidationParameters = new TokenValidationParameters
+//    {
+//        ValidateIssuer = true,
+//        ValidateAudience = true,
+//        ValidateLifetime = true,
+//        ValidateIssuerSigningKey = true,
+//        ValidIssuer = builder.Configuration["JwtSettings:Issuer"],
+//        ValidAudience = builder.Configuration["JwtSettings:Audience"],
+//        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtConfig:Key"]!))
+//    };
+//});
+//xg
 // Override configuration with environment variables
 builder
     .Configuration.SetBasePath(Directory.GetCurrentDirectory())
@@ -102,6 +128,17 @@ builder.Services.AddDbContext<ApplicationDbContext>(
 // Add Services
 builder.Services.AddScoped<IDictionaryService, DictionaryService>();
 builder.Services.AddScoped<IWorkspaceService, WorkspaceService>();
+builder.Services.AddScoped<IAccountService, AccountService>();
+// builder.Services.AddScoped<ILoginService, LoginService>();
+
+//builder.Services.AddScoped<IForgotPasswordService, ForgotPasswordService>();
+// builder.Services.AddScoped<IForgotPasswordService, ForgotPasswordService>();
+builder.Services.AddScoped<IChatService, ChatService>();
+builder.Services.AddHttpClient();
+
+//builder.Services.AddScoped<IJwtService, JwtService>();
+
+
 
 // Add OpenAPI
 builder.Services.AddOpenApi();

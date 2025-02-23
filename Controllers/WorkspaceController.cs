@@ -16,10 +16,10 @@ public class WorkspaceController : ControllerBase
         _workspaceService = workspaceService;
     }
 
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<Workspace>>> GetWorkspaces()
+    [HttpGet("{userId}")]
+    public async Task<ActionResult<IEnumerable<WorkspaceResponse>>> GetWorkspaces(Guid userId)
     {
-        var workspaces = await _workspaceService.GetWorkspacesAsync();
+        var workspaces = await _workspaceService.GetWorkspacesAsync(userId);
         return Ok(workspaces);
     }
 
@@ -31,9 +31,16 @@ public class WorkspaceController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    public async Task<ActionResult<Workspace>> UpdateWorkspace(int id, WorkspaceDto workspaceDto)
+    public async Task<ActionResult<Workspace>> UpdateWorkspace(Guid id, WorkspaceDto workspaceDto)
     {
         var workspace = await _workspaceService.UpdateWorkspaceAsync(id, workspaceDto);
+        return Ok(workspace);
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<ActionResult<Workspace>> DeleteWorkspace(Guid id)
+    {
+        var workspace = await _workspaceService.DeleteWorkspaceAsync(id);
         return Ok(workspace);
     }
 
