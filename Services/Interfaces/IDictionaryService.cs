@@ -7,8 +7,8 @@ public interface IDictionaryService
 {
     Task<DictionaryItem> CreateAsync(DictionaryItemDto item);
     Task<IEnumerable<DictionaryItem>> GetAllAsync();
-    Task<DictionaryItem?> GetByIdAsync(int id);
-    Task<DictionaryItem?> UpdateAsync(int id, DictionaryItemDto item);
-    Task<bool> DeleteAsync(int id);
+    Task<DictionaryItem?> GetByIdAsync(Guid id);
+    Task<DictionaryItem?> UpdateAsync(Guid id, DictionaryItemDto item);
+    Task<bool> DeleteAsync(Guid id);
     Task<string> GetWordDefinitionAsync(string word);
 }

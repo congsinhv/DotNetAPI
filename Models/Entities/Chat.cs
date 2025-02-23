@@ -12,7 +12,7 @@ namespace DotnetAPIProject.Models.Entities
         public Guid Id { get; set; }
 
         [Required]
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
 
         [Required]
         [MaxLength(255)]
@@ -20,8 +20,6 @@ namespace DotnetAPIProject.Models.Entities
 
         [Required]
         public DateTime CreatedAt { get; set; } = DateTime.Now;
-
-
     }
 
     [Table("DetailChat")]
@@ -43,5 +41,4 @@ namespace DotnetAPIProject.Models.Entities
         [Required]
         public Guid ChatId { get; set; }
     }
-
 }

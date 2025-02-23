@@ -58,7 +58,7 @@ public class DictionaryController : ControllerBase
 
     [HttpPut("{id}")]
     public async Task<ActionResult<DictionaryItem>> UpdaUpdateAsync(
-        int id,
+        Guid id,
         DictionaryItemDto dictionaryDto
     )
     {
@@ -67,7 +67,7 @@ public class DictionaryController : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    public async Task<ActionResult<DictionaryItem>> DeleteAsync(int id)
+    public async Task<ActionResult<DictionaryItem>> DeleteAsync(Guid id)
     {
         var dictionary = await _dictionaryService.DeleteAsync(id);
         return Ok(dictionary);
