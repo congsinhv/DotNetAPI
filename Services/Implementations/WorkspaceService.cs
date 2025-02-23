@@ -17,10 +17,10 @@ public class WorkspaceService : IWorkspaceService
 
     
 
-    public async Task<IEnumerable<Workspace>> GetWorkspacesAsync()
+    public async Task<IEnumerable<WorkspaceResponse>> GetWorkspacesAsync()
     {
         var workspaces = await _context.Workspaces
-            .Select(w => new Workspace
+            .Select(w => new WorkspaceResponse
             {
                 Id = w.Id,
                 Name = w.Name,

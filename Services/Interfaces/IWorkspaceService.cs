@@ -5,7 +5,7 @@ namespace DotnetAPIProject.Services.Interfaces;
 
 public interface IWorkspaceService
 {
-    Task<IEnumerable<Workspace>> GetWorkspacesAsync();
+    Task<IEnumerable<WorkspaceResponse>> GetWorkspacesAsync();
     Task<Workspace> AddWorkspaceAsync(WorkspaceDto workspace);
     Task<Workspace?> UpdateWorkspaceAsync(int id, WorkspaceDto workspace);
     Task<Workspace> DeleteWorkspaceAsync(int id);
