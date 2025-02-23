@@ -18,29 +18,20 @@ public class DictionaryController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<DictionaryItemDto>> GetDefinition(string word)
+    public async Task<ActionResult<IEnumerable<DictionaryItem>>> GetDictionary()
     {
-        if (string.IsNullOrWhiteSpace(word))
-            return BadRequest("Word cannot be empty.");
-
-        try
-        {
-            var definition = await _dictionaryService.GetWordDefinitionAsync(word);
-            return Ok(definition);
-        }
-        catch (HttpRequestException ex)
-        {
-            return StatusCode(StatusCodes.Status503ServiceUnavailable, "Error calling Oxford API: " + ex.Message);
-        }
+        var dictionarys = await _dictionaryService.GetAllAsync();
+        return Ok(dictionarys);
     }
-    //[HttpPost]
-    //public async Task<ActionResult<DictionaryItem>> CreateDictionary(
-    //    DictionaryItemDto dictionaryDto
-    //)
-    //{
-    //    var dictionnary = await _dictionaryService.CreateAsync(dictionaryDto);
-    //    return CreatedAtAction(nameof(GetDictionary), new { id = dictionnary.Id }, dictionnary);
-    //}
+
+    [HttpPost]
+    public async Task<ActionResult<DictionaryItem>> CreateDictionary(
+        DictionaryItemDto dictionaryDto
+    )
+    {
+        var dictionnary = await _dictionaryService.CreateAsync(dictionaryDto);
+        return CreatedAtAction(nameof(GetDictionary), new { id = dictionnary.Id }, dictionnary);
+    }
 
     [HttpPost("word-definition")]
     public async Task<ActionResult<DictionaryItem>> GetWordDefinition(
@@ -67,7 +58,7 @@ public class DictionaryController : ControllerBase
 
     [HttpPut("{id}")]
     public async Task<ActionResult<DictionaryItem>> UpdaUpdateAsync(
-        int id,
+        Guid id,
         DictionaryItemDto dictionaryDto
     )
     {
@@ -76,7 +67,7 @@ public class DictionaryController : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    public async Task<ActionResult<DictionaryItem>> DeleteAsync(int id)
+    public async Task<ActionResult<DictionaryItem>> DeleteAsync(Guid id)
     {
         var dictionary = await _dictionaryService.DeleteAsync(id);
         return Ok(dictionary);
