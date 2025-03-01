@@ -7,6 +7,9 @@ public class DictionaryItem
     public Guid Id { get; set; }
     public required string Word { get; set; }
     public required string Definition { get; set; }
+    public string type { get; set; }
+    public string pronunciation { get; set; }
+    public string meaning { get; set; }  
 
     public Guid WorkspaceId { get; set; }
 }

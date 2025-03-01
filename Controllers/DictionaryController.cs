@@ -24,6 +24,13 @@ public class DictionaryController : ControllerBase
         return Ok(dictionarys);
     }
 
+    [HttpGet("{id}")]
+    public async Task<ActionResult<IEnumerable<DictionaryItem>>> GetByIdAsyncdictionary(Guid id)
+    {
+        var dictionarys = await _dictionaryService.GetByIdAsync(id);
+        return Ok(dictionarys);
+    }
+
     [HttpPost]
     public async Task<ActionResult<DictionaryItem>> CreateDictionary(
         DictionaryItemDto dictionaryDto
