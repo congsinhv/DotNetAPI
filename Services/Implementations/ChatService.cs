@@ -1,9 +1,9 @@
-﻿
-using System;
+﻿using System;
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using Azure;
 using DotnetAPIProject.Data;
 using DotnetAPIProject.Models.DTOs;
 using DotnetAPIProject.Models.Entities;
@@ -19,6 +19,8 @@ public class ChatService : IChatService, IDisposable
     private readonly ApplicationDbContext _context;
     private readonly HttpClient _httpClient;
     private readonly IMemoryCache _cache;
+
+    private List<object> _conversationHistory = new();
     private bool _disposed = false;
 
     public ChatService(ApplicationDbContext context, IHttpClientFactory httpClientFactory, IMemoryCache cache)
@@ -50,45 +52,6 @@ public class ChatService : IChatService, IDisposable
         await _context.SaveChangesAsync();
         return newChat;
     }
-
-    // private async Task<string> GetChatTitle(string content)
-    // {
-    //     string cacheKey = $"title:{content}";
-    //     if (_cache.TryGetValue(cacheKey, out string cachedTitle))
-    //         return cachedTitle;
-
-    //     var requestBody = new
-    //     {
-    //         model = "cognitivecomputations/dolphin3.0-r1-mistral-24b:free",
-    //         messages = new[] 
-    //         { 
-    //             new 
-    //             { 
-    //                 role = "user", 
-    //                 content = $"{content}" 
-    //             } 
-    //         }
-    //     };
-
-    //     var jsonContent = JsonSerializer.Serialize(requestBody);
-    //     var response = await _httpClient.PostAsync(
-    //         string.Empty,
-    //         new StringContent(jsonContent, Encoding.UTF8, "application/json")
-    //     );
-
-    //     response.EnsureSuccessStatusCode();
-    //     var responseContent = await response.Content.ReadAsStringAsync();
-        
-    //     using var doc = JsonDocument.Parse(responseContent);
-    //     var title = doc.RootElement
-    //         .GetProperty("choices")[0]
-    //         .GetProperty("message")
-    //         .GetProperty("content")
-    //         .GetString();
-
-    //     _cache.Set(cacheKey, title, TimeSpan.FromMinutes(30));
-    //     return title;
-    // }
 
     public async Task<DetailChat> PostRequestChat(DetailChatDto request)
     {
@@ -133,37 +96,131 @@ public class ChatService : IChatService, IDisposable
         }
     }
 
-    private async Task<string> GetAiResponse(string content)
+    public async Task<string> GetAiResponse(string content)
     {
-        string cacheKey = $"response:{content}";
-        if (_cache.TryGetValue(cacheKey, out string cachedResponse))
-            return cachedResponse;
+        // Clear previous conversation history when starting new
+        ClearConversationHistory();
+        AddToConversationHistory("user", content);
 
-        var requestBody = new
+        string cacheKey = GenerateCacheKey();
+        if (_cache.TryGetValue(cacheKey, out string cachedResponse))
+        {
+            Console.WriteLine("Cache hit");
+            return cachedResponse;
+        }
+        Console.WriteLine("Cache miss");
+
+        var requestBody = CreateRequestBody();
+        var response = await SendApiRequest(requestBody);
+
+        if (response == null)
+            return "Error: Unable to fetch response.";
+
+        AddToConversationHistory("assistant", response);
+        _cache.Set(cacheKey, response, TimeSpan.FromMinutes(5));
+
+        return response;
+    }
+
+    private string GenerateCacheKey()
+    {
+        // Use the last message (current question) as part of the cache key
+        var currentQuestion = _conversationHistory.LastOrDefault() as dynamic;
+        if (currentQuestion == null) return "empty";
+        
+        return $"response:{currentQuestion.content.GetHashCode()}";
+    }
+
+    private void AddToConversationHistory(string role, string content)
+    {
+        _conversationHistory.Add(new { role, content });
+
+        // Keep only the last 20 messages to limit memory usage
+        if (_conversationHistory.Count > 20)
+            _conversationHistory.RemoveAt(0);
+    }
+
+    private object CreateRequestBody()
+    {
+        return new
         {
             model = "google/gemini-2.0-flash-thinking-exp:free",
-            messages = new[] { new { role = "user", content = content } }
+            messages = _conversationHistory
         };
+    }
 
+    private async Task<string?> SendApiRequest(object requestBody)
+    {
         var jsonContent = JsonSerializer.Serialize(requestBody);
         var response = await _httpClient.PostAsync(
-            string.Empty,
+            "https://openrouter.ai/api/v1/chat/completions", // Replace with actual API URL
             new StringContent(jsonContent, Encoding.UTF8, "application/json")
         );
 
-        response.EnsureSuccessStatusCode();
+        if (!response.IsSuccessStatusCode)
+            return null;
+
         var responseContent = await response.Content.ReadAsStringAsync();
+        var aiResponse = DeserializeApiResponse(responseContent);
 
-        using var doc = JsonDocument.Parse(responseContent);
-        var result = doc.RootElement
-            .GetProperty("choices")[0]
-            .GetProperty("message")
-            .GetProperty("content")
-            .GetString();
-
-        _cache.Set(cacheKey, result, TimeSpan.FromMinutes(5));
-        return result;
+        return aiResponse;
     }
+
+    private string? DeserializeApiResponse(string jsonResponse)
+    {
+        try
+        {
+            var doc = JsonDocument.Parse(jsonResponse);
+            return doc.RootElement
+                .GetProperty("choices")[0]
+                .GetProperty("message")
+                .GetProperty("content")
+                .GetString();
+        }
+        catch
+        {
+            return null;
+        }
+    }
+
+    private void ClearConversationHistory()
+    {
+        _conversationHistory.Clear();
+    }
+
+    // private async Task<string> GetAiResponse(string content)
+    // {
+    //     string cacheKey = $"response:{content}";
+    //     if (_cache.TryGetValue(cacheKey, out string cachedResponse))
+    //         return cachedResponse;
+
+    //     var requestBody = new
+    //     {
+    //         model = "google/gemini-2.0-flash-thinking-exp:free",
+    //         messages = new[] { new { role = "user", content = content } }
+    //     };
+
+    //     var jsonContent = JsonSerializer.Serialize(requestBody);
+    //     var response = await _httpClient.PostAsync(
+    //         string.Empty,
+    //         new StringContent(jsonContent, Encoding.UTF8, "application/json")
+    //     );
+
+    //     response.EnsureSuccessStatusCode();
+    //     var responseContent = await response.Content.ReadAsStringAsync();
+
+    //     using var doc = JsonDocument.Parse(responseContent);
+    //     var result = doc.RootElement
+    //         .GetProperty("choices")[0]
+    //         .GetProperty("message")
+    //         .GetProperty("content")
+    //         .GetString();
+
+    //     _cache.Set(cacheKey, result, TimeSpan.FromMinutes(5));
+    //     return result;
+    // }
+
+
 
     // Other methods remain unchanged
     public Task<List<Chat>> GetChatsByUserIdAsync(Guid userId) => 
