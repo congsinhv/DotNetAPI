@@ -16,7 +16,7 @@ public class WorkspaceController : ControllerBase
         _workspaceService = workspaceService;
     }
 
-    [HttpGet("{userId}")]
+    [HttpGet("{userId}", Name = "GetWorkspaces")]
     public async Task<ActionResult<IEnumerable<WorkspaceResponse>>> GetWorkspaces(Guid userId)
     {
         var workspaces = await _workspaceService.GetWorkspacesAsync(userId);
@@ -27,7 +27,7 @@ public class WorkspaceController : ControllerBase
     public async Task<ActionResult<Workspace>> CreateWorkspace(WorkspaceDto workspaceDto)
     {
         var workspace = await _workspaceService.AddWorkspaceAsync(workspaceDto);
-        return CreatedAtAction(nameof(GetWorkspaces), new { id = workspace.Id }, workspace);
+        return Ok(workspace);
     }
 
     [HttpPut("{id}")]

@@ -135,7 +135,8 @@ builder.Services.AddScoped<IAccountService, AccountService>();
 // builder.Services.AddScoped<IForgotPasswordService, ForgotPasswordService>();
 builder.Services.AddScoped<IChatService, ChatService>();
 builder.Services.AddHttpClient();
-
+builder.Services.AddMemoryCache(); // Add this line
+builder.Services.AddControllers();
 //builder.Services.AddScoped<IJwtService, JwtService>();
 
 

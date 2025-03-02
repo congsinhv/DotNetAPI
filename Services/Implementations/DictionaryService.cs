@@ -28,7 +28,13 @@ public class DictionaryService : IDictionaryService
             Word = item.Word,
             Definition = item.Definition,
             WorkspaceId = item.WorkspaceId,
+            type = item.type,
+            pronunciation = item.pronunciation,
+            meaning = item.meaning
+
         };
+
+
 
         _context.DictionaryItems.Add(dictionaryItem);
         await _context.SaveChangesAsync();
@@ -40,10 +46,13 @@ public class DictionaryService : IDictionaryService
         return await _context.DictionaryItems.ToListAsync();
     }
 
-    public async Task<DictionaryItem?> GetByIdAsync(Guid id)
+    public async Task<List<DictionaryItem>> GetByIdAsync(Guid id)
     {
-        return await _context.DictionaryItems.FirstOrDefaultAsync(d => d.Id == id);
+        return await _context.DictionaryItems
+            .Where(d => d.WorkspaceId == id)
+            .ToListAsync();
     }
+
 
     public async Task<DictionaryItem?> UpdateAsync(Guid id, DictionaryItemDto item)
     {
@@ -55,6 +64,9 @@ public class DictionaryService : IDictionaryService
         existingItem.Word = item.Word;
         existingItem.Definition = item.Definition;
         existingItem.WorkspaceId = item.WorkspaceId;
+        existingItem.type = item.type;
+        existingItem.pronunciation = item.pronunciation;
+        existingItem.meaning = item.meaning;
 
         await _context.SaveChangesAsync();
         return existingItem;

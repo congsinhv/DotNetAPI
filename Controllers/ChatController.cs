@@ -27,7 +27,7 @@ namespace DotnetAPIProject.Controllers
                 return BadRequest("Dữ liệu không hợp lệ. Vui lòng cung cấp userId.");
             }
 
-            var createdChat = await _chatService.CreateChatAsync(chat);
+            var createdChat = await _chatService.CreateChatAsync(chat, "New chat");
             return Ok(createdChat);
         }
 
