@@ -1,16 +1,16 @@
-﻿using DotnetAPIProject.Models.DTOs;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.Threading.Tasks;
+using DotnetAPIProject.Models.DTOs;
 using DotnetAPIProject.Models.Entities;
 using DotnetAPIProject.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
 
 namespace DotnetAPIProject.Controllers
 {
     [Route("api/v1/[controller]")]
     [ApiController]
-    public class ChatController  : ControllerBase
+    public class ChatController : ControllerBase
     {
         private readonly IChatService _chatService;
 
@@ -44,7 +44,7 @@ namespace DotnetAPIProject.Controllers
             return Ok(chatHistory);
         }
 
-        [HttpGet("/detail/{chatId}")]
+        [HttpGet("detail/{chatId}")]
         public async Task<IActionResult> GetDetailChatByIdAsync(Guid chatId)
         {
             var chat = await _chatService.GetDetailChatByIdAsync(chatId);
@@ -69,7 +69,7 @@ namespace DotnetAPIProject.Controllers
             return NoContent();
         }
 
-        [HttpPost("/request")]
+        [HttpPost("request")]
         public async Task<IActionResult> PostRequestChat(DetailChatDto request)
         {
             var response = await _chatService.PostRequestChat(request);
