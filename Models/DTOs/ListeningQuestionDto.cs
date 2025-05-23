@@ -7,6 +7,8 @@ namespace DotnetAPIProject.Models.DTOs
         public required string AudioUrl { get; set; } = string.Empty;
         public required string Script { get; set; } = string.Empty;
         public string? ImageUrl { get; set; }
+        public bool? isMarked { get; set; }
+        public string? DescriptionResult { get; set; }
         public required TypesOfQuestionDto Type { get; set; }
         public required List<ListeningAnswer> Options { get; set; } = new List<ListeningAnswer>();
     }
@@ -18,6 +20,7 @@ namespace DotnetAPIProject.Models.DTOs
         public required string AudioUrl { get; set; } = string.Empty;
         public required string Script { get; set; } = string.Empty;
         public string? ImageUrl { get; set; }
+        public bool? isMarked { get; set; }
         public required TypesOfQuestionDto Type { get; set; }
         public required List<ListeningAnswerResponseDto> options { get; set; } = new List<ListeningAnswerResponseDto>();
     }

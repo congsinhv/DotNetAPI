@@ -22,7 +22,10 @@ namespace DotnetAPIProject.Models.Entities
         public required string Script { get; set; }
 
         public string? ImageUrl { get; set; }
-        
+
+        public bool? IsMarked { get; set; }
+
+        public string? DescriptionResult { get; set; }
 
         [ForeignKey("TypesOfQuestions")]
         public Guid TypeOfQuestionId { get; set; }

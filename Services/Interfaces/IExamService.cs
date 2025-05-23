@@ -12,6 +12,7 @@ namespace DotnetAPIProject.Services.Interfaces
         Task<bool> DeleteExamAsync(Guid examId);
 
         Task<ExamNoAnswerDto> GetExamByIdAsync(Guid examId);
-        Task<DetailExam> PostRequestExam(DetailExamDto request);
+        
+        // Task<DetailExam> PostRequestExam(DetailExamDto request);
     }
 }

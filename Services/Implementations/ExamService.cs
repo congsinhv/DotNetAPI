@@ -123,7 +123,7 @@ public class ExamService : IExamService
 
         // Fetch questions related to the exam
         var questions = await _listeningQuestionService.GetAllListeningQuestionsAsync(examId.ToString());
-
+       
         return new ExamNoAnswerDto
         {
             Id = exam.Id,
@@ -131,8 +131,6 @@ public class ExamService : IExamService
             Topic = exam.Topic ?? string.Empty,
             Time = exam.Time,
             Skill = exam.Skill,
-            CreatedAt = exam.CreatedAt,
-            UpdatedAt = exam.UpdatedAt,
             Proficiency = new ProficiencyDto
             {
                 Id = proficiency.Id,
@@ -145,7 +143,6 @@ public class ExamService : IExamService
             questions = questions.ToList()
         };
     }
-
 
     public async Task<bool> DeleteExamAsync(Guid examId)
     {
