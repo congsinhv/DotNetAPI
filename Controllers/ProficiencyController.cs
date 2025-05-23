@@ -29,9 +29,26 @@ public class ProficiencyController : ControllerBase
         return Ok(proficiencies);
     }
 
+    [HttpGet("{id}")]
+    public async Task<ActionResult<ProficiencyDto>> GetProficiencyById(Guid id)
+    {
+        var proficiency = await _proficiencyService.GetProficiencyByIdAsync(id);
+        if (proficiency == null)
+        {
+            return NotFound($"Proficiency with ID {id} not found.");
+        }
+        return Ok(proficiency);
+    }
+
     [HttpPost]
     public async Task<ActionResult<ProficiencyDto>> CreateProficiency([FromBody] ProficiencyCreateOrUpdateDto createContent)
     {
+        var existingProficiency = await _proficiencyService.GetProficiencyByNameAsync(createContent.Name);
+        if (existingProficiency != null)
+        {
+            return Conflict($"Proficiency with name {createContent.Name} already exists.");
+        }
+        
         if (createContent == null)
         {
             return BadRequest("Invalid data.");

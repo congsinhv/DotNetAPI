@@ -29,68 +29,111 @@ public class ProficiencyService : IProficiencyService
             UpdatedAt = p.UpdatedAt
         });
     }
-        //Create a new proficiency
-        public async Task<ProficiencyDto> CreateProficiencyAsync(ProficiencyCreateOrUpdateDto createContent)
+    //Get a proficiency by ID
+    public async Task<ProficiencyDto> GetProficiencyByIdAsync(Guid id)
+    {
+        var proficiency = await _context.Proficiencies.FindAsync(id);
+        if (proficiency == null)
         {
-            var proficiency = new Proficiency
-            {
-                Band = createContent.Band ?? string.Empty,
-                Name = createContent.Name ?? string.Empty,
-                Description = createContent.Description ?? string.Empty,
-                CreatedAt = DateTime.Now,
-                UpdatedAt = DateTime.Now
-            };
-
-            _context.Proficiencies.Add(proficiency);
-            await _context.SaveChangesAsync();
-
-            return new ProficiencyDto
-            {
-                Id = proficiency.Id,
-                Band = proficiency.Band ?? string.Empty,
-                Name = proficiency.Name ?? string.Empty,
-                Description = proficiency.Description ?? string.Empty,
-                CreatedAt = proficiency.CreatedAt,
-                UpdatedAt = proficiency.UpdatedAt
-            };
+            return null;
         }
-        //Update an existing proficiency
-        public async Task<ProficiencyDto> UpdateProficiencyAsync(Guid id, ProficiencyCreateOrUpdateDto updateContent)
+
+        return new ProficiencyDto
         {
-            var proficiency = await _context.Proficiencies.FindAsync(id);
-            if (proficiency == null)
-            {
-                return null;
-            }
+            Id = proficiency.Id,
+            Band = proficiency.Band ?? string.Empty,
+            Name = proficiency.Name ?? string.Empty,
+            Description = proficiency.Description ?? string.Empty,
+            CreatedAt = proficiency.CreatedAt,
+            UpdatedAt = proficiency.UpdatedAt
+        };
+    }
 
-            proficiency.Band = updateContent.Band ?? proficiency.Band;
-            proficiency.Name = updateContent.Name ?? proficiency.Name;
-            proficiency.Description = updateContent.Description ?? proficiency.Description;
-            proficiency.UpdatedAt = DateTime.Now;
-
-            await _context.SaveChangesAsync();
-
-            return new ProficiencyDto
-            {
-                Id = proficiency.Id,
-                Band = proficiency.Band ?? string.Empty,
-                Name = proficiency.Name ?? string.Empty,
-                Description = proficiency.Description ?? string.Empty,
-                CreatedAt = proficiency.CreatedAt,
-                UpdatedAt = proficiency.UpdatedAt
-            };
-        }
-        //Delete a proficiency
-        public async Task<bool> DeleteProficiencyAsync(Guid id)
+    //Get a proficiency by name
+    public async Task<ProficiencyDto> GetProficiencyByNameAsync(string name)
+    {
+        var proficiency = await _context.Proficiencies
+            .FirstOrDefaultAsync(p => p.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+        if (proficiency == null)
         {
-            var proficiency = await _context.Proficiencies.FindAsync(id);
-            if (proficiency == null)
-            {
-                return false;
-            }
-
-            _context.Proficiencies.Remove(proficiency);
-            await _context.SaveChangesAsync();
-            return true;
+            return null;
         }
+
+        return new ProficiencyDto
+        {
+            Id = proficiency.Id,
+            Band = proficiency.Band ?? string.Empty,
+            Name = proficiency.Name ?? string.Empty,
+            Description = proficiency.Description ?? string.Empty,
+            CreatedAt = proficiency.CreatedAt,
+            UpdatedAt = proficiency.UpdatedAt
+        };
+    }
+    
+    //Create a new proficiency
+    public async Task<ProficiencyDto> CreateProficiencyAsync(ProficiencyCreateOrUpdateDto createContent)
+    {
+        var proficiency = new Proficiency
+        {
+            Band = createContent.Band ?? string.Empty,
+            Name = createContent.Name ?? string.Empty,
+            Description = createContent.Description ?? string.Empty,
+            CreatedAt = DateTime.Now,
+            UpdatedAt = DateTime.Now
+        };
+
+        _context.Proficiencies.Add(proficiency);
+        await _context.SaveChangesAsync();
+
+        return new ProficiencyDto
+        {
+            Id = proficiency.Id,
+            Band = proficiency.Band ?? string.Empty,
+            Name = proficiency.Name ?? string.Empty,
+            Description = proficiency.Description ?? string.Empty,
+            CreatedAt = proficiency.CreatedAt,
+            UpdatedAt = proficiency.UpdatedAt
+        };
+    }
+
+    //Update an existing proficiency
+    public async Task<ProficiencyDto> UpdateProficiencyAsync(Guid id, ProficiencyCreateOrUpdateDto updateContent)
+    {
+        var proficiency = await _context.Proficiencies.FindAsync(id);
+        if (proficiency == null)
+        {
+            return null;
+        }
+
+        proficiency.Band = updateContent.Band ?? proficiency.Band;
+        proficiency.Name = updateContent.Name ?? proficiency.Name;
+        proficiency.Description = updateContent.Description ?? proficiency.Description;
+        proficiency.UpdatedAt = DateTime.Now;
+
+        await _context.SaveChangesAsync();
+
+        return new ProficiencyDto
+        {
+            Id = proficiency.Id,
+            Band = proficiency.Band ?? string.Empty,
+            Name = proficiency.Name ?? string.Empty,
+            Description = proficiency.Description ?? string.Empty,
+            CreatedAt = proficiency.CreatedAt,
+            UpdatedAt = proficiency.UpdatedAt
+        };
+    }
+
+    //Delete a proficiency
+    public async Task<bool> DeleteProficiencyAsync(Guid id)
+    {
+        var proficiency = await _context.Proficiencies.FindAsync(id);
+        if (proficiency == null)
+        {
+            return false;
+        }
+
+        _context.Proficiencies.Remove(proficiency);
+        await _context.SaveChangesAsync();
+        return true;
+    }
 }

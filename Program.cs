@@ -131,6 +131,10 @@ builder.Services.AddScoped<IWorkspaceService, WorkspaceService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<ITypesOfQuestionService, TypesOfQuestionService>();
 builder.Services.AddScoped<IProficiencyService, ProficiencyService>();
+builder.Services.AddScoped<IListeningQuestionService, ListeningQuestionService>();
+builder.Services.AddScoped<IListeningAnswerService, ListeningAnswerService>();
+builder.Services.AddScoped<IExamService, ExamService>();
+
 // builder.Services.AddScoped<ILoginService, LoginService>();
 
 //builder.Services.AddScoped<IForgotPasswordService, ForgotPasswordService>();
@@ -140,6 +144,7 @@ builder.Services.AddHttpClient();
 builder.Services.AddMemoryCache(); // Add this line
 builder.Services.AddControllers();
 //builder.Services.AddScoped<IJwtService, JwtService>();
+builder.Services.AddScoped<IExamService, ExamService>();
 
 // Add OpenAPI
 builder.Services.AddOpenApi();

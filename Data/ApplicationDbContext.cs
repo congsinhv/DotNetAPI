@@ -22,6 +22,12 @@ public class ApplicationDbContext : DbContext
 
     public DbSet<Proficiency> Proficiencies { get; set; } = null!;
 
+    public DbSet<ListeningAnswer> ListeningAnswers { get; set; } = null!;
+
+    public DbSet<ListeningQuestion> ListeningQuestions { get; set; } = null!;
+
+    public DbSet<Exam> Exams { get; set; } = null!;
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);

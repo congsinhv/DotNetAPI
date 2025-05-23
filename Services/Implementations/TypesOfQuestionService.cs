@@ -28,6 +28,26 @@ public class TypesOfQuestionService : ITypesOfQuestionService
             UpdatedAt = t.UpdatedAt
         });
     }
+
+    //Get a type of question by ID
+    public async Task<TypesOfQuestionDto> GetTypeByIdAsync(Guid id)
+    {
+        var type = await _context.TypesOfQuestions.FindAsync(id);
+        if (type == null)
+        {
+            return null;
+        }
+
+        return new TypesOfQuestionDto
+        {
+            Id = type.Id,
+            Name = type.Name ?? string.Empty,
+            Description = type.Description ?? string.Empty,
+            CreatedAt = type.CreatedAt,
+            UpdatedAt = type.UpdatedAt
+        };
+    }
+
     //Create a new type of question
     public async Task<TypesOfQuestionDto> CreateTypeAsync(TypesOfQuestionCreateOrUpdateDto createContent)
     {
