@@ -129,6 +129,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(
 builder.Services.AddScoped<IDictionaryService, DictionaryService>();
 builder.Services.AddScoped<IWorkspaceService, WorkspaceService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<ITypesOfQuestionService, TypesOfQuestionService>();
+builder.Services.AddScoped<IProficiencyService, ProficiencyService>();
 // builder.Services.AddScoped<ILoginService, LoginService>();
 
 //builder.Services.AddScoped<IForgotPasswordService, ForgotPasswordService>();
@@ -138,8 +140,6 @@ builder.Services.AddHttpClient();
 builder.Services.AddMemoryCache(); // Add this line
 builder.Services.AddControllers();
 //builder.Services.AddScoped<IJwtService, JwtService>();
-
-
 
 // Add OpenAPI
 builder.Services.AddOpenApi();

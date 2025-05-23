@@ -130,6 +130,30 @@ namespace DotnetAPIProject.Migrations
                     b.ToTable("DictionaryItems");
                 });
 
+            modelBuilder.Entity("DotnetAPIProject.Models.Entities.TypesOfQuestion", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TypesOfQuestion");
+                });
+
             modelBuilder.Entity("DotnetAPIProject.Models.Entities.Workspace", b =>
                 {
                     b.Property<Guid>("Id")

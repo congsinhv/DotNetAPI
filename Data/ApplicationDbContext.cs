@@ -18,6 +18,9 @@ public class ApplicationDbContext : DbContext
     //public DbSet<Jwt> Jwts { get; set; } = null!;
     public DbSet<Chat> Chats { get; set; } = null!;
     public DbSet<DetailChat> DetailChats { get; set; } = null!;
+    public DbSet<TypesOfQuestion> TypesOfQuestions { get; set; } = null!;
+
+    public DbSet<Proficiency> Proficiencies { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
