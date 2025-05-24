@@ -12,10 +12,10 @@ namespace DotnetAPIProject.Models.Entities
         public Guid Id { get; set; }
 
         [Required]
-        public required string UserId { get; set; }
+        public required Guid UserId { get; set; }
 
         [Required]
-        public required string ExamId { get; set; }
+        public required Guid ExamId { get; set; }
 
         [Required]
         public required float FinishTime { get; set; }

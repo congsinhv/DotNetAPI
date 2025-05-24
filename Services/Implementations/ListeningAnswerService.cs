@@ -15,6 +15,17 @@ public class ListeningAnswerService : IListeningAnswerService
         _context = context ?? throw new ArgumentNullException(nameof(context));
     }
 
+    public bool IsCorrectAnswer(Guid answerId)
+    {
+        if (answerId == Guid.Empty)
+            return false;
+        var answer = _context.ListeningAnswers
+            .AsNoTracking()
+            .FirstOrDefault(a => a.Id == answerId);
+
+        return answer?.IsCorrect ?? false;
+    }
+    
     public async Task<Models.DTOs.ListeningAnswer> CreateListeningAnswerAsync(string questionId, ListeningAnswerCreate listeningAnswerCreate)
     {
         if (!Guid.TryParse(questionId, out var questionGuid))

@@ -1,0 +1,72 @@
+{
+  "userId": "40B941BA-2E6B-4374-85CF-08DD96D7563D",
+  "examId": "74D6A0C9-F5FF-482E-8252-C52550C63E3F",
+  "finishTime": 10,
+  "userAnswers": [
+    {
+      "ListeningQuestionId": "fc2ad1d7-36c2-4e7f-459e-08dd99f7a87b",
+      "answer": "2e909480-09f9-4b29-af46-dd69a3b78d6d",
+      "isMarked": false
+    },
+    {
+      "ListeningQuestionId": "0acc8b60-a085-4354-8f9a-08dd9a8e957e",
+      "answer": "df970b4b-80e4-4147-8b1a-28273a876af5",
+      "isMarked": false
+    },
+    {
+      "ListeningQuestionId": "285dae77-1826-4708-8f9c-08dd9a8e957e",
+      "answer": "",
+      "isMarked": true
+    },
+    {
+      "ListeningQuestionId": "a7d75b8e-382c-4b1a-8f9d-08dd9a8e957e",
+      "answer": "f27f1388-4c53-4b26-9dfe-def74d957322",
+      "isMarked": false
+    },
+    {
+      "ListeningQuestionId": "bc75af56-739d-4db8-8f9e-08dd9a8e957e",
+      "answer": "bcd9ef86-3a8f-4b07-a800-2cb2aa802292",
+      "isMarked": false
+    },
+    {
+      "ListeningQuestionId": "261da291-09ef-49ca-8f9f-08dd9a8e957e",
+      "answer": "",
+      "isMarked": true
+    },
+    {
+      "ListeningQuestionId": "3efc78e1-e9b6-4b82-8fa0-08dd9a8e957e",
+      "answer": "d49adb64-e156-4e4b-ad38-38e6741433e9",
+      "isMarked": false
+    },
+    {
+      "ListeningQuestionId": "261da291-09ef-49ca-8f9f-08dd9a8e957e",
+      "answer": "",
+      "isMarked": true
+    },
+    {
+      "ListeningQuestionId": "3efc78e1-e9b6-4b82-8fa0-08dd9a8e957e",
+      "answer": "d49adb64-e156-4e4b-ad38-38e6741433e9",
+      "isMarked": false
+    },
+    {
+      "ListeningQuestionId": "eb8550c6-f9ed-42ea-8fa1-08dd9a8e957e",
+      "answer": "a10dc9cf-358f-41e9-90c4-aa550e67c934",
+      "isMarked": false
+    },
+    {
+      "ListeningQuestionId": "c1e11f98-963b-4f14-8fa2-08dd9a8e957e",
+      "answer": "",
+      "isMarked": true
+    },
+    {
+      "ListeningQuestionId": "e5aaebfb-caa9-4cdd-8fa3-08dd9a8e957e",
+      "answer": "d25fa6a0-9179-42c3-8985-80ae02b608a4",
+      "isMarked": false
+    },
+    {
+      "ListeningQuestionId": "6f5f2517-d5c4-40bd-8fa4-08dd9a8e957e",
+      "answer": "8117703b-3e3b-4efb-b2cd-17eb0c03f186",
+      "isMarked": false
+    }
+  ]
+}

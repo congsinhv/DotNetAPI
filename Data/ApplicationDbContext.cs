@@ -28,6 +28,10 @@ public class ApplicationDbContext : DbContext
 
     public DbSet<Exam> Exams { get; set; } = null!;
 
+    public DbSet<ListeningResult> ListeningResults { get; set; } = null!;
+
+    public DbSet<ListeningResultDetails> ListeningResultDetails { get; set; } = null!;
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);

@@ -134,6 +134,8 @@ builder.Services.AddScoped<IProficiencyService, ProficiencyService>();
 builder.Services.AddScoped<IListeningQuestionService, ListeningQuestionService>();
 builder.Services.AddScoped<IListeningAnswerService, ListeningAnswerService>();
 builder.Services.AddScoped<IExamService, ExamService>();
+builder.Services.AddScoped<IListeningResultService, ListeningResultService>();
+builder.Services.AddScoped<IListeningResultDetailService, ListeningResultDetailService>();
 
 // builder.Services.AddScoped<ILoginService, LoginService>();
 

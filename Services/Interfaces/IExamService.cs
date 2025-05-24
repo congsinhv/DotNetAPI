@@ -12,6 +12,7 @@ namespace DotnetAPIProject.Services.Interfaces
         Task<IEnumerable<ExamNoAnswerDto>> GetExamsByProficiencyIdAsync(Guid proficiencyId);
         Task<ExamBaseDto> CreateExamAsync(ExamCreate exam);
         Task<bool> DeleteExamAsync(Guid examId);
+        
         // Task<DetailExam> PostRequestExam(DetailExamDto request);
     }
 }

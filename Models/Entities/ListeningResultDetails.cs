@@ -18,13 +18,14 @@ namespace DotnetAPIProject.Models.Entities
         [ForeignKey("ListeningQuestion")]
         public Guid ListeningQuestionId { get; set; }
 
-        public bool? isMarked { get; set; }
+        [Required]
+        public required bool isMarked { get; set; }
 
         public string? Status { get; set; } // correct, incorrect, not answered
 
 
         [ForeignKey("ListeningAnswer")]
-        public string? AnswerId { get; set; }
+        public Guid? AnswerId { get; set; }
     }
 }
 
