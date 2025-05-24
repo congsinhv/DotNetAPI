@@ -25,42 +25,33 @@ public class ExamService : IExamService
         _listeningQuestionService = listeningQuestionService ?? throw new ArgumentNullException(nameof(listeningQuestionService));
     }
 
-    public async Task<IEnumerable<ExamBaseDto>> GetExamsByNameAsync(string name)
+    public async Task<ExamBaseDto> CheckExistExam(string name, string proficiencyId)
     {
-        if (string.IsNullOrWhiteSpace(name))
-            return Enumerable.Empty<ExamBaseDto>();
+        if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(proficiencyId))
+            return null;
 
-        var exams = await _context.Exams
-            .Where(e => e.Name.Contains(name))
-            .AsNoTracking()
-            .ToListAsync();
+        if (!Guid.TryParse(proficiencyId, out Guid proficiencyGuid))
+            return null;
 
-        // For each exam, fetch its proficiency
-        var proficiencyIds = exams.Select(e => e.ProficiencyId).Distinct().ToList();
-        var proficiencies = await _context.Proficiencies
-            .Where(p => proficiencyIds.Contains(p.Id))
-            .ToListAsync();
+        var exam = await _context.Exams
+            .FirstOrDefaultAsync(e => e.Name == name && e.ProficiencyId == proficiencyGuid);
 
-        return exams.Select(e => new ExamBaseDto
+        if (exam == null)
+            return null;
+
+        var proficiency = await _proficiencyService.GetProficiencyByIdAsync(exam.ProficiencyId);
+
+        return new ExamBaseDto
         {
-            Id = e.Id,
-            Name = e.Name,
-            Topic = e.Topic ?? string.Empty,
-            Time = e.Time,
-            Skill = e.Skill,
-            Proficiency = proficiencies
-                .Where(p => p.Id == e.ProficiencyId)
-                .Select(p => new ProficiencyDto
-                {
-                    Id = p.Id,
-                    Name = p.Name,
-                    Band = p.Band,
-                    Description = p.Description ?? string.Empty,
-                    CreatedAt = p.CreatedAt,
-                    UpdatedAt = p.UpdatedAt
-                })
-                .FirstOrDefault() ?? new ProficiencyDto()
-        });
+            Id = exam.Id,
+            Name = exam.Name,
+            Topic = exam.Topic ?? string.Empty,
+            Time = exam.Time,
+            Skill = exam.Skill,
+            CreatedAt = exam.CreatedAt,
+            UpdatedAt = exam.UpdatedAt,
+            Proficiency = proficiency
+        };
     }
 
     public async Task<ExamBaseDto> CreateExamAsync(ExamCreate exam)
@@ -108,7 +99,7 @@ public class ExamService : IExamService
         };
     }
 
-    public async Task<ExamNoAnswerDto?> GetExamByIdAsync(Guid examId)
+    public async Task<ExamNoAnswerDto> GetExamByIdAsync(Guid examId)
     {
         var exam = await _context.Exams.FirstOrDefaultAsync(e => e.Id == examId);
 
@@ -143,6 +134,40 @@ public class ExamService : IExamService
             questions = questions.ToList()
         };
     }
+
+    public async Task<IEnumerable<ExamNoAnswerDto>> GetExamsByProficiencyIdAsync(Guid proficiencyId)
+    {
+        var exams = await _context.Exams
+            .Where(e => e.ProficiencyId == proficiencyId)
+            .ToListAsync();
+
+        if (exams == null || exams.Count == 0)
+            return Enumerable.Empty<ExamNoAnswerDto>();
+
+        var proficiency = await _proficiencyService.GetProficiencyByIdAsync(proficiencyId);
+        if (proficiency == null)
+            return Enumerable.Empty<ExamNoAnswerDto>();
+
+        var result = new List<ExamNoAnswerDto>();
+        foreach (var exam in exams)
+        {
+            var questions = await _listeningQuestionService.GetAllListeningQuestionsAsync(exam.Id.ToString());
+            result.Add(new ExamNoAnswerDto
+            {
+                Id = exam.Id,
+                Name = exam.Name,
+                Topic = exam.Topic ?? string.Empty,
+                Time = exam.Time,
+                Skill = exam.Skill,
+                CreatedAt = exam.CreatedAt,
+                UpdatedAt = exam.UpdatedAt,
+                Proficiency = proficiency,
+                questions = questions.ToList()
+            });
+        }
+        return result;
+    }
+
 
     public async Task<bool> DeleteExamAsync(Guid examId)
     {

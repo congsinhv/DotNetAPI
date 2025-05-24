@@ -12,17 +12,20 @@ public class ExamController : ControllerBase
 {
     private readonly IExamService _examService;
 
-    public ExamController(IExamService examService)
+    private readonly IProficiencyService _proficiencyService;
+
+    public ExamController(IExamService examService , IProficiencyService proficiencyService)
     {
         _examService = examService;
+        _proficiencyService = proficiencyService;
     }
 
     [HttpPost]
     public async Task<ActionResult<ExamBaseDto>> CreateExam([FromBody] ExamCreate exam)
     {
         // Validate the incoming data
-        var existingExam = await _examService.GetExamsByNameAsync(exam.Name);
-        if (existingExam.Any())
+        var existingExam = await _examService.CheckExistExam(exam.Name, exam.ProficiencyId.ToString());
+        if (existingExam != null)
         {
             return Conflict("An exam with this name already exists.");
         }
@@ -57,5 +60,21 @@ public class ExamController : ControllerBase
             return NotFound();
         }
         return Ok(exam);
+    }
+
+    [HttpGet("{proficiencyId}/exams")]
+    public async Task<ActionResult<IEnumerable<ExamBaseDto>>> GetExamsByProficiencyId([FromRoute] Guid proficiencyId)
+    {
+        var existingProficiency = await _proficiencyService.GetProficiencyByIdAsync(proficiencyId);
+        if (existingProficiency == null)
+        {
+            return NotFound("Proficiency not found.");
+        }
+        var exams = await _examService.GetExamsByProficiencyIdAsync(proficiencyId);
+        if (exams == null || !exams.Any())
+        {
+            return Ok(new List<ExamBaseDto>());
+        }
+        return Ok(exams);
     }
 }
