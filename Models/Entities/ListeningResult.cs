@@ -18,10 +18,9 @@ namespace DotnetAPIProject.Models.Entities
         public required Guid ExamId { get; set; }
 
         [Required]
-        public required float FinishTime { get; set; }
+        public required double FinishTime { get; set; }
 
-        public string? OverallScore { get; set; }
-        
+        public int? OverallScore { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime UpdatedAt { get; set; } = DateTime.Now;

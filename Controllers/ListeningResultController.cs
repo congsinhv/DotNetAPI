@@ -17,7 +17,9 @@ public class ListeningResultController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult<ListeningResultDto>> CreateListeningResult([FromBody] ListeningResultCreateDto createContent)
+    public async Task<ActionResult<ListeningResultDto>> CreateListeningResult(
+        [FromBody] ListeningResultCreateDto createContent
+    )
     {
         if (createContent == null)
         {
@@ -25,7 +27,9 @@ public class ListeningResultController : ControllerBase
         }
         try
         {
-            var createdResult = await _listeningResultService.CreateListeningResultAsync(createContent);
+            var createdResult = await _listeningResultService.CreateListeningResultAsync(
+                createContent
+            );
             if (createdResult == null)
             {
                 return BadRequest("Failed to create listening result.");
@@ -44,17 +48,17 @@ public class ListeningResultController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public async Task<ActionResult<ListeningResultDto>> GetListeningResultById(Guid resultId)
+    public async Task<ActionResult<ResultResponseDto>> GetListeningResultById(Guid id)
     {
-        if (resultId == Guid.Empty)
+        if (id == Guid.Empty)
         {
             return BadRequest("Invalid ID.");
         }
 
-        var result = await _listeningResultService.GetDetailResultByResultIdAsync(resultId);
+        var result = await _listeningResultService.GetDetailResultByResultIdAsync(id);
         if (result == null)
         {
-            return NotFound($"List of listening result detail with result ID {resultId} not found.");
+            return NotFound($"List of listening result detail with result ID {id} not found.");
         }
 
         return Ok(result);
