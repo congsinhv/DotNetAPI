@@ -11,4 +11,5 @@ public interface IDictionaryService
     Task<DictionaryItem?> UpdateAsync(Guid id, DictionaryItemDto item);
     Task<bool> DeleteAsync(Guid id);
     Task<string> GetWordDefinitionAsync(string word);
+    Task<DictionaryItem?> UpdateLearningStatusAsync(Guid id, bool isLearned);
 }
