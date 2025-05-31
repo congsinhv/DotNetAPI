@@ -10,6 +10,8 @@ public class DictionaryItemDto
     public string type { get; set; }
     public string pronunciation { get; set; }
     public string meaning { get; set; }
+    public string? VietnameseMeaning { get; set; }
+    public bool isLearned { get; set; }
 }
 
 public class WordDefinitionDto

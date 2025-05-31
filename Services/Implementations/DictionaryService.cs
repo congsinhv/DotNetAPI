@@ -5,6 +5,7 @@ using DotnetAPIProject.Models.DTOs;
 using DotnetAPIProject.Models.Entities;
 using DotnetAPIProject.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Google.Cloud.Translation.V2;
 
 namespace DotnetAPIProject.Services.Implementations;
 
@@ -13,12 +14,31 @@ public class DictionaryService : IDictionaryService
     private readonly ApplicationDbContext _context;
     private readonly string _baseUrl;
     private readonly IHttpClientFactory _httpClientFactory;
+    private readonly TranslationClient _translationClient;
 
     public DictionaryService(ApplicationDbContext context, IHttpClientFactory httpClientFactory)
     {
         _context = context;
         _httpClientFactory = httpClientFactory;
         _baseUrl = Environment.GetEnvironmentVariable("OXFORD_DICTIONARY_BASE_URL") ?? "dummy";
+        _translationClient = TranslationClient.Create();
+    }
+
+    private async Task<string> TranslateToVietnameseAsync(string text)
+    {
+        try
+        {
+            var response = await _translationClient.TranslateTextAsync(
+                text: text,
+                targetLanguage: "vi",
+                sourceLanguage: "en"
+            );
+            return response.TranslatedText;
+        }
+        catch (Exception ex)
+        {
+            throw new HttpRequestException($"Error calling Google Translate API: {ex.Message}");
+        }
     }
 
     public async Task<DictionaryItem> CreateAsync(DictionaryItemDto item)
@@ -30,11 +50,9 @@ public class DictionaryService : IDictionaryService
             WorkspaceId = item.WorkspaceId,
             type = item.type,
             pronunciation = item.pronunciation,
-            meaning = item.meaning
-
+            meaning = item.meaning,
+            VietnameseMeaning = await TranslateToVietnameseAsync(item.Word)
         };
-
-
 
         _context.DictionaryItems.Add(dictionaryItem);
         await _context.SaveChangesAsync();
@@ -81,6 +99,17 @@ public class DictionaryService : IDictionaryService
         _context.DictionaryItems.Remove(item);
         await _context.SaveChangesAsync();
         return true;
+    }
+
+    public async Task<DictionaryItem?> UpdateLearningStatusAsync(Guid id, bool isLearned)
+    {
+        var item = await _context.DictionaryItems.FindAsync(id);
+        if (item == null)
+            return null;
+
+        item.isLearned = isLearned;
+        await _context.SaveChangesAsync();
+        return item;
     }
 
     public async Task<string> GetWordDefinitionAsync(string word)
