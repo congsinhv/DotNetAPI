@@ -23,7 +23,7 @@ namespace DotnetAPIProject.Models.Entities
         [ForeignKey("ExamId")]
         public virtual Exam Exam { get; set; }
 
-        [ForeignKey("TypeId")]
-        public virtual TypeQuestion TypeQuestion { get; set; }
+
+        public virtual string TypeQuestion { get; set; }
     }
 } 
