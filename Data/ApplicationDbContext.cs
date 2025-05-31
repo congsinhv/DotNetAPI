@@ -18,14 +18,12 @@ public class ApplicationDbContext : DbContext
 
     //public DbSet<Jwt> Jwts { get; set; } = null!;
     public DbSet<Chat> Chats { get; set; } = null!;
-    public DbSet<DetailChat> DetailChats { get; set; } = null!;
-    //
-
     public DbSet<Proficiency> Proficiencies { get; set; } = null!;
-    public DbSet<Topic> Topics { get; set; } = null!;
+    public DbSet<DetailChat> DetailChats { get; set; } = null!;
+    public DbSet<Answer> Answers { get; set; } = null!;
+    public DbSet<Question> Questions { get; set; } = null!;
     public DbSet<Exam> Exams { get; set; } = null!;
-
-
+    public DbSet<Topic> Topics { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

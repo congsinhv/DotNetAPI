@@ -19,5 +19,14 @@ namespace DotnetAPIProject.Services.Implementations
             return await _context.Proficiencies.ToListAsync();  // Lấy tất cả các Level từ DB
         }
 
+        public async Task<Proficiency> GetProficiencyByIdAsync(Guid proficiencyId)
+        {
+            var proficiency = await _context.Proficiencies.FindAsync(proficiencyId);
+            if (proficiency == null)
+            {
+                throw new Exception("Proficiency not found");
+            }
+            return proficiency;
+        }
     }
 }
