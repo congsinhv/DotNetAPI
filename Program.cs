@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.HttpOverrides;
 
 // Load environment variables from .env file
 DotEnv.Load(options: new DotEnvOptions(probeLevelsToSearch: 3));
@@ -161,19 +162,20 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
-
+app.UsePathBase("/dotnet");
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+// if (app.Environment.IsDevelopment())
+// {
     logger.LogInformation("Running in Development mode");
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+
+// }
 
 // Enable CORS
 app.UseCors("AllowAll");
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
 
@@ -181,5 +183,8 @@ app.MapControllers();
 app.MapHealthChecks("/health");
 
 logger.LogInformation("Application configured and ready to start");
-
+app.UseForwardedHeaders(new ForwardedHeadersOptions
+{
+    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+});
 app.Run();
