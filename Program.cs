@@ -139,7 +139,9 @@ builder.Services.AddMemoryCache(); // Add this line
 builder.Services.AddControllers();
 //builder.Services.AddScoped<IJwtService, JwtService>();
 
-
+builder.Services.AddScoped<IProficiencyService, ProficiencyService>();
+builder.Services.AddScoped<ITopicService, TopicService>();
+builder.Services.AddScoped<IExamsService, ExamService>();
 
 // Add OpenAPI
 builder.Services.AddOpenApi();

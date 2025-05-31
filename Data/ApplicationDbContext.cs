@@ -1,4 +1,5 @@
 using DotnetAPIProject.Models.Entities;
+using DotnetAPIProject.Services.Implementations;
 using Microsoft.EntityFrameworkCore;
 
 namespace DotnetAPIProject.Data;
@@ -18,6 +19,13 @@ public class ApplicationDbContext : DbContext
     //public DbSet<Jwt> Jwts { get; set; } = null!;
     public DbSet<Chat> Chats { get; set; } = null!;
     public DbSet<DetailChat> DetailChats { get; set; } = null!;
+    //
+
+    public DbSet<Proficiency> Proficiencies { get; set; } = null!;
+    public DbSet<Topic> Topics { get; set; } = null!;
+    public DbSet<Exam> Exams { get; set; } = null!;
+
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
