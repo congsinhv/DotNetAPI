@@ -1,10 +1,11 @@
-﻿using DotnetAPIProject.Models.DTOs;
+using DotnetAPIProject.Models.DTOs;
 using DotnetAPIProject.Models.Entities;
 using DotnetAPIProject.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DotnetAPIProject.Controllers
 {
+    [Route("api/[controller]")]
     public class ProficiencyController : ControllerBase
     {
         private readonly IProficiencyService _proficiencyService;
@@ -17,11 +18,11 @@ namespace DotnetAPIProject.Controllers
         [HttpGet("Proficiency")]
         public async Task<ActionResult<IEnumerable<Proficiency>>> GetLevel()
         {
-            var proficiency = await _proficiencyService.GetProficiencyAsync();
+            var proficiency = await _proficiencyService.GetAllAsync();
             return Ok(proficiency);
         }
         // add
-       
+
         [HttpPost("Proficiency")]
         public async Task<IActionResult> Create([FromBody] CreateProficiencyDto dto)
         {

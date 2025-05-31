@@ -4,8 +4,13 @@ namespace DotnetAPIProject.Services.Interfaces
 {
     public interface IExamsService
     {
-        Task<IEnumerable<ExamDto>> GetExamAsync(Guid? topicId);
+        
         Task<ExamDto> CreateExamAsync(CreateExamDto examDto);
 
+        // Get all exams by topic id
+        Task<IEnumerable<ExamDto>> GetExamAsync(Guid? topicId);
+
+        // Get detail exam by id
+        Task<ExamHaveAnswerResponseDto> GetDetailExamByIdAsync(Guid examId);
     }
 }

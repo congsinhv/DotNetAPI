@@ -17,7 +17,7 @@ namespace DotnetAPIProject.Controllers
         }
 
         [HttpGet("Topic")]
-        public async Task<ActionResult<IEnumerable<TopicDto>>> GetTopics([FromQuery] Guid? ProficiencyId = null)
+        public async Task<ActionResult<IEnumerable<TopicResponseDto>>> GetTopics([FromQuery] Guid ProficiencyId)
         {
             try
             {
@@ -30,26 +30,28 @@ namespace DotnetAPIProject.Controllers
             }
             catch (Exception ex)
             {
+
+                // Log the exception (bạn có thể dùng ILogger để ghi log)
                 return StatusCode(500, "An error occurred while retrieving topics.");
             }
         }
+ 
         // add 
         [HttpPost("Topic")]
         public async Task<IActionResult> Create([FromBody] CreateTopicDto dto)
         {
             var result = await _topicService.CreateTopicAsync(dto);
-            return CreatedAtAction(nameof(GetById), new { idTopic = result.IdTopic }, result);
+            return CreatedAtAction(nameof(GetTopicByIdAsync), new { idTopic = result.IdTopic }, result);
 
         }
 
-        [HttpGet("{idTopic}")]
-        public async Task<IActionResult> GetById(Guid idTopic)
+        [HttpGet("Topic/{topicId}")]
+        public async Task<ActionResult<TopicDto>> GetTopicByIdAsync([FromRoute] Guid topicId)
         {
-            var all = await _topicService.GetTopicsAsync(null); 
-            var one = all.FirstOrDefault(x => x.IdTopic == idTopic);
-            if (one == null) return NotFound();
-            return Ok(one);
+            var topic = await _topicService.GetTopicByIdAsync(topicId);
+            if (topic == null)
+                return NotFound("Topic not found.");
+            return Ok(topic);
         }
-
     }
 }

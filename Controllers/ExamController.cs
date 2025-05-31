@@ -43,7 +43,8 @@ namespace DotnetAPIProject.Controllers
             try
             {
                 var result = await _examService.CreateExamAsync(examDto);
-                return CreatedAtAction(nameof(GetExamById), new { id = result.IdExam }, result);
+                // return CreatedAtAction(nameof(GetExamById), new { id = result.IdExam }, result);
+                return result != null ? CreatedAtAction(nameof(GetExamById), new { examId = result.IdExam }, result) : BadRequest("Failed to create exam.");
             }
             catch (Exception ex)
             {
@@ -51,13 +52,11 @@ namespace DotnetAPIProject.Controllers
             }
         }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetExamById(Guid id)
+       
+        [HttpGet("{examId}")]
+        public async Task<ActionResult<ExamHaveAnswerResponseDto>> GetExamById([FromRoute] Guid examId)
         {
-            var exams = await _examService.GetExamAsync(null);
-            var exam = exams.FirstOrDefault(x => x.IdExam == id);
-
-            if (exam == null) return NotFound();
+            var exam = await _examService.GetDetailExamByIdAsync(examId);
             return Ok(exam);
         }
     }

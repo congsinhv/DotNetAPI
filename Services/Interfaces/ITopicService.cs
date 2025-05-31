@@ -5,9 +5,8 @@ namespace DotnetAPIProject.Services.Interfaces
 {
     public interface ITopicService
     {
-        Task<IEnumerable<TopicDto>> GetTopicsAsync(Guid? ProficiencyId);
         Task<TopicDto> CreateTopicAsync(CreateTopicDto dto);
-        //Task<List<TopicDto>> GetTopicsAsync(Guid? proficiencyId);
-
+        Task<IEnumerable<TopicResponseDto>> GetTopicsAsync(Guid ProficiencyId);
+        Task<TopicDto> GetTopicByIdAsync(Guid topicId);
     }
 }

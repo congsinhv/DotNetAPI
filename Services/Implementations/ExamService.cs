@@ -10,10 +10,16 @@ namespace DotnetAPIProject.Services.Implementations
     public class ExamService : IExamsService
     {
         private readonly ApplicationDbContext _context;
+        private readonly ITopicService _topicService;
+        private readonly IProficiencyService _proficiencyService;
+        private readonly IQuestionService _questionService;
 
-        public ExamService(ApplicationDbContext context)
+        public ExamService(ApplicationDbContext context, ITopicService topicService, IProficiencyService proficiencyService, IQuestionService questionService)
         {
             _context = context;
+            _topicService = topicService;
+            _proficiencyService = proficiencyService;
+            _questionService = questionService;
         }
       
         public async Task<IEnumerable<ExamDto>> GetExamAsync(Guid? topicId)
@@ -65,5 +71,34 @@ namespace DotnetAPIProject.Services.Implementations
 
 
 
+
+    public async Task<ExamHaveAnswerResponseDto> GetDetailExamByIdAsync(Guid examId)
+    {
+        var exam = await _context.Exams.FirstOrDefaultAsync(e => e.Id == examId);
+
+        if (exam == null)
+            return null;
+
+        // Fetch proficiency details
+        // var proficiency = await _proficiencyService.GetProficiencyByIdAsync(exam.ProficiencyId);
+        var topic = await _topicService.GetTopicByIdAsync(exam.TopicId);
+
+        if (topic == null)
+            return null;
+
+        // Fetch questions related to the exam
+        var questions = await _questionService.GetAllQuestionsByExamIdAsync(examId);
+
+        return new ExamHaveAnswerResponseDto
+        {
+            Id = exam.Id,
+            Name = exam.Name,
+            Topic = topic,
+            Time = exam.Time,
+            Skill = exam.Skill,
+            questions = questions.ToList()
+        };
+    }
+       
     }
 }

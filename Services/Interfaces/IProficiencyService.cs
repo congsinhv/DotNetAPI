@@ -1,14 +1,15 @@
-﻿using DotnetAPIProject.Models.DTOs;
+using DotnetAPIProject.Models.DTOs;
 using DotnetAPIProject.Models.Entities;
 
 namespace DotnetAPIProject.Services.Interfaces
 {
     public interface IProficiencyService
     {
-        Task<IEnumerable<Proficiency>> GetProficiencyAsync();
-        Task<ProficiencyDto> CreateProficiencyAsync(CreateProficiencyDto dto);
-        Task<List<ProficiencyDto>> GetAllAsync();
+        Task<ProficiencyResponseDto> CreateProficiencyAsync(CreateProficiencyDto dto);
+        Task<List<ProficiencyResponseDto>> GetAllAsync();
 
+        Task<Proficiency> GetProficiencyByIdAsync(Guid proficiencyId);
+        //Task<Proficiency> CreateProficiencyAsync(Proficiency proficiency); // Add this line
 
     }
 }

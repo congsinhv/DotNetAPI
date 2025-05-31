@@ -15,12 +15,8 @@ namespace DotnetAPIProject.Services.Implementations
         {
             _context = context;
         }
-        public async Task<IEnumerable<Proficiency>> GetProficiencyAsync()
-        {
-            return await _context.Proficiencies.ToListAsync();  
-        }
         // add
-        public async Task<ProficiencyDto> CreateProficiencyAsync(CreateProficiencyDto dto)
+        public async Task<ProficiencyResponseDto> CreateProficiencyAsync(CreateProficiencyDto dto)
         {
             var entity = new Proficiency
             {
@@ -33,7 +29,7 @@ namespace DotnetAPIProject.Services.Implementations
             _context.Proficiencies.Add(entity);
             await _context.SaveChangesAsync();
 
-            return new ProficiencyDto
+            return new ProficiencyResponseDto
             {
                 Id = entity.Id,
                 Band = entity.Band,
@@ -41,10 +37,10 @@ namespace DotnetAPIProject.Services.Implementations
                 Description = entity.Description
             };
         }
-        public async Task<List<ProficiencyDto>> GetAllAsync()
+        public async Task<List<ProficiencyResponseDto>> GetAllAsync()
         {
             return await _context.Proficiencies
-                .Select(p => new ProficiencyDto
+                .Select(p => new ProficiencyResponseDto
                 {
                     Id = p.Id,
                     Band = p.Band,
@@ -53,7 +49,14 @@ namespace DotnetAPIProject.Services.Implementations
                 }).ToListAsync();
         }
 
-
-
+        public async Task<Proficiency> GetProficiencyByIdAsync(Guid proficiencyId)
+        {
+            var proficiency = await _context.Proficiencies.FindAsync(proficiencyId);
+            if (proficiency == null)
+            {
+                throw new Exception("Proficiency not found");
+            }
+            return proficiency;
+        }
     }
 }
