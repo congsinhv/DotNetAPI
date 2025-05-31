@@ -38,7 +38,32 @@ namespace DotnetAPIProject.Services.Implementations
             return await query.ToListAsync();
         }
         //
-     
-       
+        public async Task<ExamDto> CreateExamAsync(CreateExamDto examDto)
+        {
+            var exam = new Exam
+            {
+                Id = Guid.NewGuid(),
+                Name = examDto.NameExam,
+                TopicId = examDto.TopicID,
+                Time = examDto.Time,
+                Skill = examDto.Skill,
+                CreatedAt = DateTime.UtcNow,
+                UpdatedAt = DateTime.UtcNow
+            };
+
+            _context.Exams.Add(exam);
+            await _context.SaveChangesAsync();
+
+            return new ExamDto
+            {
+                IdExam = exam.Id,
+                NameExam = exam.Name,
+                TopicID = exam.TopicId,
+                TopicName = (await _context.Topics.FindAsync(exam.TopicId))?.Name
+            };
+        }
+
+
+
     }
 }

@@ -2,6 +2,8 @@
 
 public class ProficiencyDto
 {
+    public Guid Id { get; set; }
+
     [Required, MaxLength(20)]
     public string Band { get; set; }
 

@@ -35,6 +35,30 @@ namespace DotnetAPIProject.Services.Implementations
 
             return await query.ToListAsync();
         }
+        // add 
+        public async Task<TopicDto> CreateTopicAsync(CreateTopicDto dto)
+        {
+            var entity = new Topic
+            {
+                Id = Guid.NewGuid(),
+                Name = dto.TopicName,
+                ProficienciesId = dto.ProficiencyId
+            };
+
+            _context.Topics.Add(entity);
+            await _context.SaveChangesAsync();
+
+            var proficiency = await _context.Proficiencies.FindAsync(dto.ProficiencyId);
+
+            return new TopicDto
+            {
+                IdTopic = entity.Id,
+                Name = entity.Name,
+                IdProficiency = entity.ProficienciesId,
+                NameProficiency = proficiency?.Name
+            };
+        }
+
 
 
 

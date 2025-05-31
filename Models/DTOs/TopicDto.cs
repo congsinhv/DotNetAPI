@@ -2,9 +2,9 @@
 {
     public class TopicDto
     {
-        public Guid IdTopic { get; set; }              // sửa từ int -> Guid
+        public Guid IdTopic { get; set; }          
         public string Name { get; set; }
-        public Guid IdProficiency { get; set; }        // sửa từ int -> Guid
+        public Guid IdProficiency { get; set; }      
         public string NameProficiency { get; set; }
     }
 
