@@ -9,7 +9,9 @@ public class DictionaryItem
     public required string Definition { get; set; }
     public string type { get; set; }
     public string pronunciation { get; set; }
-    public string meaning { get; set; }  
+    public string meaning { get; set; }
+    public string VietnameseMeaning { get; set; }
+    public bool isLearned { get; set; } = false;
 
     public Guid WorkspaceId { get; set; }
 }

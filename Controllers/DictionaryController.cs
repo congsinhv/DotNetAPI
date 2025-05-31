@@ -74,10 +74,21 @@ public class DictionaryController : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    public async Task<ActionResult<DictionaryItem>> DeleteAsync(Guid id)
+    public async Task<IActionResult> DeleteDictionary(Guid id)
     {
-        var dictionary = await _dictionaryService.DeleteAsync(id);
-        return Ok(dictionary);
+        var result = await _dictionaryService.DeleteAsync(id);
+        if (!result)
+            return NotFound();
+        return NoContent();
+    }
+
+    [HttpPatch("{id}/learning-status")]
+    public async Task<IActionResult> UpdateLearningStatus(Guid id, [FromBody] bool isLearned)
+    {
+        var result = await _dictionaryService.UpdateLearningStatusAsync(id, isLearned);
+        if (result == null)
+            return NotFound();
+        return Ok(result);
     }
 
     // TODO: Implement the rest of the endpoints
