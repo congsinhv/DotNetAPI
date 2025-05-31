@@ -37,5 +37,12 @@ namespace DotnetAPIProject.Controllers
                 return StatusCode(500, "An error occurred while retrieving exams.");
             }
         }
+
+        [HttpGet("{examId}")]
+        public async Task<ActionResult<ExamHaveAnswerResponseDto>> GetExamById([FromRoute] Guid examId)
+        {
+            var exam = await _examService.GetDetailExamByIdAsync(examId);
+            return Ok(exam);
+        }
     }
 }

@@ -11,33 +11,53 @@ namespace DotnetAPIProject.Services.Implementations
     public class TopicService : ITopicService
     {
         private readonly ApplicationDbContext _context;
+        private readonly IProficiencyService _proficiencyService;
 
-        public TopicService(ApplicationDbContext context)
+        public TopicService(ApplicationDbContext context, IProficiencyService proficiencyService)
         {
             _context = context;
+            _proficiencyService = proficiencyService;
         }
-        public async Task<IEnumerable<TopicDto>> GetTopicsAsync(Guid? ProficiencyId)
+        public async Task<IEnumerable<TopicResponseDto>> GetTopicsAsync(Guid ProficiencyId)
         {
-            var query = _context.Topics
-                .Include(t => t.Proficiency)
-                .Select(t => new TopicDto
-                {
-                    IdTopic = t.Id,
-                    Name = t.Name,
-                    IdProficiency = t.ProficienciesId,
-                    NameProficiency = t.Proficiency.Name
-                });
+            //Get topics by proficiency id
+            var topics = await _context.Topics.Where(t => t.ProficienciesId == ProficiencyId).ToListAsync();
+            if (topics == null)
+                return null;
 
-            if (ProficiencyId.HasValue)
+            //Convert to TopicResponseDto
+            var topicResponseDtos = topics.Select(t => new TopicResponseDto
             {
-                query = query.Where(t => t.IdProficiency == ProficiencyId.Value);
-            }
-
-            return await query.ToListAsync();
+                IdTopic = t.Id,
+                Name = t.Name,
+            });
+            return topicResponseDtos;
         }
 
+        public async Task<TopicDto> GetTopicByIdAsync(Guid topicId)
+        {
+            var topic = await _context.Topics.FindAsync(topicId);
 
+            if (topic == null)
+                return null;
 
+            var proficiency = await _proficiencyService.GetProficiencyByIdAsync(topic.ProficienciesId);
+
+            //Convert to TopicDto
+            var topicDto = new TopicDto
+            {
+                IdTopic = topic.Id,
+                Name = topic.Name,
+                Proficiency = new ProficiencyResponseDto
+                {
+                    Id = proficiency.Id,
+                    Name = proficiency.Name,
+                    Band = proficiency.Band,
+                    Description = proficiency.Description
+                }
+            };
+            return topicDto;
+        }
 
     }
 }

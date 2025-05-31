@@ -16,7 +16,7 @@ namespace DotnetAPIProject.Controllers
         }
 
         [HttpGet("Topic")]
-        public async Task<ActionResult<IEnumerable<TopicDto>>> GetTopics([FromQuery] Guid? ProficiencyId = null)
+        public async Task<ActionResult<IEnumerable<TopicResponseDto>>> GetTopics([FromQuery] Guid ProficiencyId)
         {
             try
             {
@@ -34,5 +34,13 @@ namespace DotnetAPIProject.Controllers
             }
         }
 
+        [HttpGet("Topic/{topicId}")]
+        public async Task<ActionResult<TopicDto>> GetTopicByIdAsync([FromRoute] Guid topicId)
+        {
+            var topic = await _topicService.GetTopicByIdAsync(topicId);
+            if (topic == null)
+                return NotFound("Topic not found.");
+            return Ok(topic);
+        }
     }
 }

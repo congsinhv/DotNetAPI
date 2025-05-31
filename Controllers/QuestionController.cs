@@ -42,4 +42,15 @@ public class QuestionController : ControllerBase
             return StatusCode(500, $"An error occurred while creating the question: {ex.Message}");
         }
     }
+
+    [HttpGet("{examId}")]
+    public async Task<ActionResult<IEnumerable<QuestionNoAnswerDto>>> GetAllQuestionsByExamId(Guid examId)
+    {
+        var questions = await _questionService.GetAllQuestionsByExamIdAsync(examId);
+        if (questions == null)
+        {
+            return NotFound("No questions found for the given exam ID.");
+        }
+        return Ok(questions);
+    }
 }

@@ -66,9 +66,6 @@ public class QuestionService : IQuestionService
 
     public async Task<IEnumerable<QuestionNoAnswerDto>> GetAllQuestionsByExamIdAsync(Guid examId)
     {
-        if (examId == Guid.Empty)
-            throw new ArgumentNullException(nameof(examId));
-
         var questions = await _context.Questions
             .Where(q => q.ExamId == examId)
             .ToListAsync();
