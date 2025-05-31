@@ -45,13 +45,15 @@ namespace DotnetAPIProject.Services.Implementations
             {
                 return new List<ProficiencyResponseDto>();
             }
-            return proficiencyList.Select(p => new ProficiencyResponseDto
-            {
-                Id = p.Id,
-                Band = p.Band,
-                Name = p.Name,
-                Description = p.Description
-            }).ToList();
+            
+            return await _context.Proficiencies
+                .Select(p => new ProficiencyResponseDto
+                {
+                    Id = p.Id,
+                    Band = p.Band,
+                    Name = p.Name,
+                    Description = p.Description
+                }).ToListAsync();
         }
 
         public async Task<Proficiency> GetProficiencyByIdAsync(Guid proficiencyId)
