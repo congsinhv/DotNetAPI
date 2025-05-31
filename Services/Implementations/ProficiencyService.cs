@@ -39,6 +39,13 @@ namespace DotnetAPIProject.Services.Implementations
         }
         public async Task<List<ProficiencyResponseDto>> GetAllAsync()
         {
+            // Get all proficiencies and map to ProficiencyResponseDto
+            var proficiencyList = await _context.Proficiencies.ToListAsync();
+            if (proficiencyList == null || !proficiencyList.Any())
+            {
+                return new List<ProficiencyResponseDto>();
+            }
+            
             return await _context.Proficiencies
                 .Select(p => new ProficiencyResponseDto
                 {

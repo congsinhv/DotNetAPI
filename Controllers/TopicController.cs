@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace DotnetAPIProject.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class TopicController : ControllerBase
     {
         private readonly ITopicService _topicService;
@@ -16,7 +18,7 @@ namespace DotnetAPIProject.Controllers
             _topicService = topicService;
         }
 
-        [HttpGet("Topic")]
+        [HttpGet]
         public async Task<ActionResult<IEnumerable<TopicResponseDto>>> GetTopics([FromQuery] Guid ProficiencyId)
         {
             try
@@ -36,16 +38,24 @@ namespace DotnetAPIProject.Controllers
             }
         }
  
+
         // add 
-        [HttpPost("Topic")]
-        public async Task<IActionResult> Create([FromBody] CreateTopicDto dto)
+        [HttpPost]
+        public async Task<bool> Create([FromBody] CreateTopicDto dto)
         {
             var result = await _topicService.CreateTopicAsync(dto);
-            return CreatedAtAction(nameof(GetTopicByIdAsync), new { idTopic = result.IdTopic }, result);
+
+            // Ensure result.IdTopic is not null or Guid.Empty
+            if (result == null || result.IdTopic == Guid.Empty)
+            {
+                return false;
+            }
+
+            return true;
 
         }
 
-        [HttpGet("Topic/{topicId}")]
+        [HttpGet("{topicId}")]
         public async Task<ActionResult<TopicDto>> GetTopicByIdAsync([FromRoute] Guid topicId)
         {
             var topic = await _topicService.GetTopicByIdAsync(topicId);
