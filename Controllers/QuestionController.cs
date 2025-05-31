@@ -7,13 +7,13 @@ namespace DotnetAPIProject.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class ListeningQuestionController : ControllerBase
+public class QuestionController : ControllerBase
 {
-    private readonly IListeningQuestionService _listeningQuestionService;
+    private readonly IQuestionService _questionService;
 
-    public ListeningQuestionController(IListeningQuestionService listeningQuestionService)
+    public QuestionController(IQuestionService questionService)
     {
-        _listeningQuestionService = listeningQuestionService;
+        _questionService = questionService;
     }
 
     [HttpPost]
@@ -25,7 +25,7 @@ public class ListeningQuestionController : ControllerBase
         }
         try
         {
-            var createdQuestion = await _listeningQuestionService.CreateQuestionAsync(createContent);
+            var createdQuestion = await _questionService.CreateQuestionAsync(createContent);
             if (createdQuestion == null)
             {
                 return BadRequest("Failed to create question.");

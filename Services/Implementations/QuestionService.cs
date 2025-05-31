@@ -60,8 +60,7 @@ public class QuestionService : IQuestionService
         {
             Id = newQuestion.Id,
             Content = newQuestion.Content,
-            TypeQuestion = newQuestion.TypeQuestion,
-            Options = options,
+            TypeQuestion = newQuestion.TypeQuestion
         };
     }
 
@@ -84,8 +83,7 @@ public class QuestionService : IQuestionService
             {
                 Id = question.Id,
                 Content = question.Content,
-                TypeQuestion = question.TypeQuestion,
-                Options = options,
+                TypeQuestion = question.TypeQuestion
             });
         }
 
