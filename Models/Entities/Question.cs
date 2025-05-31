@@ -11,19 +11,12 @@ namespace DotnetAPIProject.Models.Entities
         public Guid Id { get; set; }
 
         [Required]
-        [Column(TypeName = "NVARCHAR(MAX)")]
-        public string Content { get; set; } = string.Empty;
+        public required string Content { get; set; } = string.Empty;
 
-        [Required]
-        public Guid ExamId { get; set; }
-
-        [Required]
-        public Guid TypeId { get; set; }
 
         [ForeignKey("ExamId")]
-        public virtual Exam Exam { get; set; }
+        public required Guid ExamId { get; set; }
 
-        [Required]
         [Column(TypeName = "NVARCHAR(MAX)")]
         public string TypeQuestion { get; set; } = string.Empty;
     }
