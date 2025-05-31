@@ -2,6 +2,7 @@
 using DotnetAPIProject.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using DotnetAPIProject.Models.DTOs;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 
 namespace DotnetAPIProject.Controllers
@@ -29,9 +30,19 @@ namespace DotnetAPIProject.Controllers
             }
             catch (Exception ex)
             {
+
                 // Log the exception (bạn có thể dùng ILogger để ghi log)
                 return StatusCode(500, "An error occurred while retrieving topics.");
             }
+        }
+ 
+        // add 
+        [HttpPost("Topic")]
+        public async Task<IActionResult> Create([FromBody] CreateTopicDto dto)
+        {
+            var result = await _topicService.CreateTopicAsync(dto);
+            return CreatedAtAction(nameof(GetTopicByIdAsync), new { idTopic = result.IdTopic }, result);
+
         }
 
         [HttpGet("Topic/{topicId}")]

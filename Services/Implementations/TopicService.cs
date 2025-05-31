@@ -18,6 +18,37 @@ namespace DotnetAPIProject.Services.Implementations
             _context = context;
             _proficiencyService = proficiencyService;
         }
+
+        public async Task<TopicDto> CreateTopicAsync(CreateTopicDto dto)
+        {
+            var entity = new Topic
+            {
+                Id = Guid.NewGuid(),
+                Name = dto.TopicName,
+                ProficienciesId = dto.ProficiencyId
+            };
+
+            _context.Topics.Add(entity);
+            await _context.SaveChangesAsync();
+
+            var proficiency = await _proficiencyService.GetProficiencyByIdAsync(entity.ProficienciesId);
+
+            var topicDto = new TopicDto
+            {
+                IdTopic = entity.Id,
+                Name = entity.Name,
+                Proficiency = new ProficiencyResponseDto
+                {
+                    Id = proficiency.Id,
+                    Name = proficiency.Name,
+                    Band = proficiency.Band,
+                    Description = proficiency.Description
+                }
+
+            };
+             return topicDto;
+        }
+
         public async Task<IEnumerable<TopicResponseDto>> GetTopicsAsync(Guid ProficiencyId)
         {
             //Get topics by proficiency id

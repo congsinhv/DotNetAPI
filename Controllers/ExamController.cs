@@ -33,11 +33,26 @@ namespace DotnetAPIProject.Controllers
             }
             catch (Exception ex)
             {
-                // Log lỗi nếu có logger
                 return StatusCode(500, "An error occurred while retrieving exams.");
             }
         }
+        // lấy
+        [HttpPost]
+        public async Task<IActionResult> CreateExam([FromBody] CreateExamDto examDto)
+        {
+            try
+            {
+                var result = await _examService.CreateExamAsync(examDto);
+                // return CreatedAtAction(nameof(GetExamById), new { id = result.IdExam }, result);
+                return result != null ? CreatedAtAction(nameof(GetExamById), new { examId = result.IdExam }, result) : BadRequest("Failed to create exam.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "An error occurred while creating the exam.");
+            }
+        }
 
+       
         [HttpGet("{examId}")]
         public async Task<ActionResult<ExamHaveAnswerResponseDto>> GetExamById([FromRoute] Guid examId)
         {
