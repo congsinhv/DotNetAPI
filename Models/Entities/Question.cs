@@ -23,7 +23,8 @@ namespace DotnetAPIProject.Models.Entities
         [ForeignKey("ExamId")]
         public virtual Exam Exam { get; set; }
 
-
-        public virtual string TypeQuestion { get; set; }
+        [Required]
+        [Column(TypeName = "NVARCHAR(MAX)")]
+        public string TypeQuestion { get; set; } = string.Empty;
     }
 } 
