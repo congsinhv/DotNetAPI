@@ -8,6 +8,8 @@ namespace DotnetAPIProject.Models.DTOs
 
         [Required, MaxLength(100)]
         public string Name { get; set; }
+         [MaxLength(100)]
+        public string? Skill { get; set; }
 
         [MaxLength(255)]
         public string Description { get; set; }
@@ -17,6 +19,7 @@ namespace DotnetAPIProject.Models.DTOs
     {
         public Guid Id { get; set; }
         public required string Name { get; set; }
+        public required string? Skill { get; set; }
         public required string Band { get; set; }
         public required string Description { get; set; }
     }

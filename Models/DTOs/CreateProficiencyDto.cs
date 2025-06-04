@@ -6,6 +6,8 @@ namespace DotnetAPIProject.Models.DTOs
     {
         public string Band { get; set; } = string.Empty;
         public string Name { get; set; } = string.Empty;
+        public string Skill { get; set; } = string.Empty;
+
         public string Description { get; set; } = string.Empty;
     }
 }

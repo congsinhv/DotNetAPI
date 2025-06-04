@@ -7,6 +7,7 @@ namespace DotnetAPIProject.Services.Interfaces
     {
         Task<ProficiencyResponseDto> CreateProficiencyAsync(CreateProficiencyDto dto);
         Task<List<ProficiencyResponseDto>> GetAllAsync();
+        Task<List<ProficiencyResponseDto>> GetAllReading();
 
         Task<Proficiency> GetProficiencyByIdAsync(Guid proficiencyId);
         //Task<Proficiency> CreateProficiencyAsync(Proficiency proficiency); // Add this line

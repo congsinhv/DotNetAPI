@@ -3,8 +3,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DotnetAPIProject.Models.Entities
 {
-    [Table("ResultUserExam")]
-    public class ResultUserExam
+    [Table("UserExam")]
+    public class UserExam
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

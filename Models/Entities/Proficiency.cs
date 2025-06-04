@@ -17,8 +17,12 @@ namespace DotnetAPIProject.Models.Entities
         [Required]
         [MaxLength(100)]
         public string Name { get; set; } = string.Empty;
+       
+        [MaxLength(100)]
+        public string? Skill { get; set; } = string.Empty;
 
         [MaxLength(255)]
         public string Description { get; set; } = string.Empty;
+        public ICollection<Topic> Topics { get; set; } = new List<Topic>();
     }
 } 

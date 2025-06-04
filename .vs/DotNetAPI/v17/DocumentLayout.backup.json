@@ -1,26 +1,188 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Code\\BE English\\DotNetAPI\\",
+  "WorkspaceRootPath": "E:\\Api\u002BMyvocal\\DotNetAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\code\\be english\\dotnetapi\\controllers\\topiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:controllers\\topiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\services\\implementations\\examservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:services\\implementations\\examservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\code\\be english\\dotnetapi\\services\\implementations\\topicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:services\\implementations\\topicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\models\\dtos\\examdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:models\\dtos\\examdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\code\\be english\\dotnetapi\\controllers\\proficiencycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:controllers\\proficiencycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\controllers\\examcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:controllers\\examcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\code\\be english\\dotnetapi\\services\\implementations\\proficiencyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\controllers\\pdfdocumentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:controllers\\pdfdocumentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\services\\implementations\\proficiencyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:services\\implementations\\proficiencyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\code\\be english\\dotnetapi\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:.env||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\controllers\\proficiencycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:controllers\\proficiencycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\services\\interfaces\\iproficiencyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:services\\interfaces\\iproficiencyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\controllers\\useranswercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:controllers\\useranswercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\models\\dtos\\proficiencydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:models\\dtos\\proficiencydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\models\\entities\\proficiency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:models\\entities\\proficiency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\models\\dtos\\createproficiencydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:models\\dtos\\createproficiencydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\services\\implementations\\topicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:services\\implementations\\topicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LENOVO\\AppData\\Local\\SourceServer\\cae20f00d7db54a422e8465ee0db4c9e9d76a628a8a877910255e7b04c6e3576\\Services\\Implementations\\ProficiencyService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\models\\dtos\\submitanswerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:models\\dtos\\submitanswerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\controllers\\answerreadingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:controllers\\answerreadingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\models\\dtos\\testreviewdatadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:models\\dtos\\testreviewdatadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\models\\dtos\\answercheckresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:models\\dtos\\answercheckresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\models\\dtos\\createtopicdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:models\\dtos\\createtopicdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\models\\entities\\userexam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:models\\entities\\userexam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\services\\implementations\\questionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:services\\implementations\\questionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\services\\interfaces\\iforgotpasswordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:services\\interfaces\\iforgotpasswordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\services\\implementations\\answerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:services\\implementations\\answerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\services\\interfaces\\ianswerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:services\\interfaces\\ianswerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\services\\interfaces\\idictionaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:services\\interfaces\\idictionaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\models\\entities\\usersubmit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:models\\entities\\usersubmit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\models\\entities\\answersreading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:models\\entities\\answersreading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\models\\entities\\pdfdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:models\\entities\\pdfdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\models\\entities\\exam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:models\\entities\\exam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\models\\entities\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:models\\entities\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\models\\dtos\\accountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:models\\dtos\\accountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\models\\entities\\topic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:models\\entities\\topic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\models\\entities\\answer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:models\\entities\\answer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\models\\entities\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:models\\entities\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\models\\entities\\detailresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:models\\entities\\detailresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\controllers\\dictionarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:controllers\\dictionarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\services\\implementations\\dictionaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:services\\implementations\\dictionaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\controllers\\questioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:controllers\\questioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\models\\dtos\\answerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:models\\dtos\\answerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\services\\interfaces\\iexamsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:services\\interfaces\\iexamsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\controllers\\answercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:controllers\\answercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\api\u002Bmyvocal\\dotnetapi\\controllers\\topiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:controllers\\topiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Code\\BE English\\DotNetAPI\\.env||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,55 +192,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 13,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": ".env",
-              "DocumentMoniker": "E:\\Code\\BE English\\DotNetAPI\\.env",
-              "RelativeDocumentMoniker": ".env",
-              "ToolTip": "E:\\Code\\BE English\\DotNetAPI\\.env",
-              "RelativeToolTip": ".env",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-05-31T04:22:47.178Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TopicController.cs",
-              "DocumentMoniker": "E:\\Code\\BE English\\DotNetAPI\\Controllers\\TopicController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TopicController.cs",
-              "ToolTip": "E:\\Code\\BE English\\DotNetAPI\\Controllers\\TopicController.cs*",
-              "RelativeToolTip": "Controllers\\TopicController.cs*",
-              "ViewState": "AgIAACEAAAAAAAAAAAAowCsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T06:38:06.886Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TopicService.cs",
-              "DocumentMoniker": "E:\\Code\\BE English\\DotNetAPI\\Services\\Implementations\\TopicService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\TopicService.cs",
-              "ToolTip": "E:\\Code\\BE English\\DotNetAPI\\Services\\Implementations\\TopicService.cs",
-              "RelativeToolTip": "Services\\Implementations\\TopicService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T06:36:18.799Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Bookmark",
@@ -90,45 +212,565 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 45,
+              "Title": ".env",
+              "DocumentMoniker": "E:\\Code\\BE English\\DotNetAPI\\.env",
+              "RelativeDocumentMoniker": "..\\..\\Code\\BE English\\DotNetAPI\\.env",
+              "ToolTip": "E:\\Code\\BE English\\DotNetAPI\\.env",
+              "RelativeToolTip": "..\\..\\Code\\BE English\\DotNetAPI\\.env",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-31T04:22:47.178Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ProficiencyService.cs",
-              "DocumentMoniker": "E:\\Code\\BE English\\DotNetAPI\\Services\\Implementations\\ProficiencyService.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Services\\Implementations\\ProficiencyService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\ProficiencyService.cs",
-              "ToolTip": "E:\\Code\\BE English\\DotNetAPI\\Services\\Implementations\\ProficiencyService.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Services\\Implementations\\ProficiencyService.cs",
               "RelativeToolTip": "Services\\Implementations\\ProficiencyService.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAwwDsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAwwEwAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-31T06:29:55.194Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
+              "Title": "ProficiencyDto.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\DTOs\\ProficiencyDto.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\ProficiencyDto.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\DTOs\\ProficiencyDto.cs",
+              "RelativeToolTip": "Models\\DTOs\\ProficiencyDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T11:28:05.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CreateProficiencyDto.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\DTOs\\CreateProficiencyDto.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\CreateProficiencyDto.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\DTOs\\CreateProficiencyDto.cs",
+              "RelativeToolTip": "Models\\DTOs\\CreateProficiencyDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T06:42:18.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "ProficiencyController.cs",
-              "DocumentMoniker": "E:\\Code\\BE English\\DotNetAPI\\Controllers\\ProficiencyController.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Controllers\\ProficiencyController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProficiencyController.cs",
-              "ToolTip": "E:\\Code\\BE English\\DotNetAPI\\Controllers\\ProficiencyController.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Controllers\\ProficiencyController.cs",
               "RelativeToolTip": "Controllers\\ProficiencyController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowCUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAqwDYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-31T06:15:02.231Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PdfDocumentController.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Controllers\\PdfDocumentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PdfDocumentController.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Controllers\\PdfDocumentController.cs",
+              "RelativeToolTip": "Controllers\\PdfDocumentController.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAIAwwG4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T08:44:02.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserAnswerController.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Controllers\\UserAnswerController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserAnswerController.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Controllers\\UserAnswerController.cs",
+              "RelativeToolTip": "Controllers\\UserAnswerController.cs",
+              "ViewState": "AgIAAN4AAAAAAAAAAAAmwO8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T14:55:40.98Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ExamController.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Controllers\\ExamController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ExamController.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Controllers\\ExamController.cs",
+              "RelativeToolTip": "Controllers\\ExamController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T06:41:49.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ExamService.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Services\\Implementations\\ExamService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\ExamService.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Services\\Implementations\\ExamService.cs",
+              "RelativeToolTip": "Services\\Implementations\\ExamService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCEAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T08:41:57.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ExamDto.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\DTOs\\ExamDto.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\ExamDto.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\DTOs\\ExamDto.cs",
+              "RelativeToolTip": "Models\\DTOs\\ExamDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T08:42:44.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TopicService.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Services\\Implementations\\TopicService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\TopicService.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Services\\Implementations\\TopicService.cs",
+              "RelativeToolTip": "Services\\Implementations\\TopicService.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAIwF4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T06:36:18.799Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Proficiency.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\Entities\\Proficiency.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\Proficiency.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\Entities\\Proficiency.cs",
+              "RelativeToolTip": "Models\\Entities\\Proficiency.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAmwBMAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T12:53:42.989Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": ".env",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\.env",
+              "RelativeDocumentMoniker": ".env",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\.env",
+              "RelativeToolTip": ".env",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-31T08:16:34.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IProficiencyService.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Services\\Interfaces\\IProficiencyService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IProficiencyService.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Services\\Interfaces\\IProficiencyService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IProficiencyService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T12:35:23.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AnswerCheckResponseDto.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\DTOs\\AnswerCheckResponseDto.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\AnswerCheckResponseDto.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\DTOs\\AnswerCheckResponseDto.cs",
+              "RelativeToolTip": "Models\\DTOs\\AnswerCheckResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T10:39:27.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TestReviewDataDto.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\DTOs\\TestReviewDataDto.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\TestReviewDataDto.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\DTOs\\TestReviewDataDto.cs",
+              "RelativeToolTip": "Models\\DTOs\\TestReviewDataDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T10:39:02.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AnswerReadingController.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Controllers\\AnswerReadingController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AnswerReadingController.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Controllers\\AnswerReadingController.cs",
+              "RelativeToolTip": "Controllers\\AnswerReadingController.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowDoAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T15:14:56.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ProficiencyService.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\AppData\\Local\\SourceServer\\cae20f00d7db54a422e8465ee0db4c9e9d76a628a8a877910255e7b04c6e3576\\Services\\Implementations\\ProficiencyService.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\AppData\\Local\\SourceServer\\cae20f00d7db54a422e8465ee0db4c9e9d76a628a8a877910255e7b04c6e3576\\Services\\Implementations\\ProficiencyService.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAcwCoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T11:29:23.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CreateTopicDto.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\DTOs\\CreateTopicDto.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\CreateTopicDto.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\DTOs\\CreateTopicDto.cs",
+              "RelativeToolTip": "Models\\DTOs\\CreateTopicDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T06:42:20.828Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SubmitAnswerRequest.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\DTOs\\SubmitAnswerRequest.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\SubmitAnswerRequest.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\DTOs\\SubmitAnswerRequest.cs",
+              "RelativeToolTip": "Models\\DTOs\\SubmitAnswerRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T17:22:36.633Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UserExam.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\Entities\\UserExam.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\UserExam.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\Entities\\UserExam.cs",
+              "RelativeToolTip": "Models\\Entities\\UserExam.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T08:30:02.828Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "QuestionService.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Services\\Implementations\\QuestionService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\QuestionService.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Services\\Implementations\\QuestionService.cs",
+              "RelativeToolTip": "Services\\Implementations\\QuestionService.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowC8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T16:24:16.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IForgotPasswordService.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Services\\Interfaces\\IForgotPasswordService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IForgotPasswordService.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Services\\Interfaces\\IForgotPasswordService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IForgotPasswordService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T16:24:20.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Exam.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\Entities\\Exam.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\Exam.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\Entities\\Exam.cs",
+              "RelativeToolTip": "Models\\Entities\\Exam.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAowCMAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T08:38:26.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Account.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\Entities\\Account.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\Account.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\Entities\\Account.cs",
+              "RelativeToolTip": "Models\\Entities\\Account.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAmwBYAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T08:47:30.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IDictionaryService.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Services\\Interfaces\\IDictionaryService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IDictionaryService.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Services\\Interfaces\\IDictionaryService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IDictionaryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T16:24:22.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AnswerService.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Services\\Implementations\\AnswerService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\AnswerService.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Services\\Implementations\\AnswerService.cs",
+              "RelativeToolTip": "Services\\Implementations\\AnswerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T16:30:27.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IAnswerService.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Services\\Interfaces\\IAnswerService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IAnswerService.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Services\\Interfaces\\IAnswerService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IAnswerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T08:41:44.845Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "UserSubmit.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\Entities\\UserSubmit.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\UserSubmit.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\Entities\\UserSubmit.cs",
+              "RelativeToolTip": "Models\\Entities\\UserSubmit.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAUwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T08:28:31.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAcwGsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T17:11:12.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "AnswersReading.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\Entities\\AnswersReading.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\AnswersReading.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\Entities\\AnswersReading.cs",
+              "RelativeToolTip": "Models\\Entities\\AnswersReading.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAUwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T08:28:07.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAswD4AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T16:18:50.976Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "PdfDocument.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\Entities\\PdfDocument.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\PdfDocument.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\Entities\\PdfDocument.cs",
+              "RelativeToolTip": "Models\\Entities\\PdfDocument.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T08:27:36.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "AccountDto.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\DTOs\\AccountDto.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\AccountDto.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\DTOs\\AccountDto.cs",
+              "RelativeToolTip": "Models\\DTOs\\AccountDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T12:02:54.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Topic.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\Entities\\Topic.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\Topic.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\Entities\\Topic.cs",
+              "RelativeToolTip": "Models\\Entities\\Topic.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T08:48:22.856Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Answer.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\Entities\\Answer.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\Answer.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\Entities\\Answer.cs",
+              "RelativeToolTip": "Models\\Entities\\Answer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T08:38:23.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAA0wBwAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T08:51:50.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Chat.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\Entities\\Chat.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\Chat.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\Entities\\Chat.cs",
+              "RelativeToolTip": "Models\\Entities\\Chat.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T15:40:11.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "DetailResult.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\Entities\\DetailResult.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\DetailResult.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\Entities\\DetailResult.cs",
+              "RelativeToolTip": "Models\\Entities\\DetailResult.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T09:02:18.989Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "DictionaryService.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Services\\Implementations\\DictionaryService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\DictionaryService.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Services\\Implementations\\DictionaryService.cs",
+              "RelativeToolTip": "Services\\Implementations\\DictionaryService.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAIwBcAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T08:44:24.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "DictionaryController.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Controllers\\DictionaryController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DictionaryController.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Controllers\\DictionaryController.cs",
+              "RelativeToolTip": "Controllers\\DictionaryController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T08:44:43.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "QuestionController.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Controllers\\QuestionController.cs",
+              "RelativeDocumentMoniker": "Controllers\\QuestionController.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Controllers\\QuestionController.cs",
+              "RelativeToolTip": "Controllers\\QuestionController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T08:44:06.258Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "IExamsService.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Services\\Interfaces\\IExamsService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IExamsService.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Services\\Interfaces\\IExamsService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IExamsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T08:41:47.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "AnswerController.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Controllers\\AnswerController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AnswerController.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Controllers\\AnswerController.cs",
+              "RelativeToolTip": "Controllers\\AnswerController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T08:41:10.69Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "AnswerDto.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\DTOs\\AnswerDto.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\AnswerDto.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Models\\DTOs\\AnswerDto.cs",
+              "RelativeToolTip": "Models\\DTOs\\AnswerDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T08:39:20.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "TopicController.cs",
+              "DocumentMoniker": "E:\\Api\u002BMyvocal\\DotNetAPI\\Controllers\\TopicController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TopicController.cs",
+              "ToolTip": "E:\\Api\u002BMyvocal\\DotNetAPI\\Controllers\\TopicController.cs",
+              "RelativeToolTip": "Controllers\\TopicController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T06:38:06.886Z"
             }
           ]
         }

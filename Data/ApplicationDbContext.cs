@@ -24,7 +24,11 @@ public class ApplicationDbContext : DbContext
     public DbSet<Question> Questions { get; set; } = null!;
     public DbSet<Exam> Exams { get; set; } = null!;
     public DbSet<Topic> Topics { get; set; } = null!;
+    public DbSet<PdfDocument> PdfDocuments { get; set; } = null!;
+    public DbSet<UserSubmit> UserSubmit { get; set; } = null!;
+    public DbSet<UserExam> UserExam { get; set; } = null!;
 
+    public DbSet<AnswersReading> AnswersReading { get; set; } = null!;
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);

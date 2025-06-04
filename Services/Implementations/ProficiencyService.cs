@@ -23,6 +23,7 @@ namespace DotnetAPIProject.Services.Implementations
                 Id = Guid.NewGuid(),
                 Band = dto.Band,
                 Name = dto.Name,
+                Skill= dto.Skill,
                 Description = dto.Description
             };
 
@@ -34,10 +35,13 @@ namespace DotnetAPIProject.Services.Implementations
                 Id = entity.Id,
                 Band = entity.Band,
                 Name = entity.Name,
+                Skill = entity.Skill,
                 Description = entity.Description
             };
         }
-        public async Task<List<ProficiencyResponseDto>> GetAllAsync()
+      
+            // Get all proficiencies and map to ProficiencyResponseDto
+          public async Task<List<ProficiencyResponseDto>> GetAllAsync()
         {
             // Get all proficiencies and map to ProficiencyResponseDto
             var proficiencyList = await _context.Proficiencies.ToListAsync();
@@ -45,13 +49,14 @@ namespace DotnetAPIProject.Services.Implementations
             {
                 return new List<ProficiencyResponseDto>();
             }
-            
+
             return await _context.Proficiencies
                 .Select(p => new ProficiencyResponseDto
                 {
                     Id = p.Id,
                     Band = p.Band,
                     Name = p.Name,
+                    Skill = p.Skill,
                     Description = p.Description
                 }).ToListAsync();
         }
@@ -65,5 +70,23 @@ namespace DotnetAPIProject.Services.Implementations
             }
             return proficiency;
         }
+        public async Task<List<ProficiencyResponseDto>> GetAllReading()
+        {
+            var proficiencyList = await _context.Proficiencies
+            // Retrieve all proficiencies and map to ProficiencyResponseDto in a single query
+          .Where(p => p.Skill == "Reading") // Filter by Listening
+        .Select(p => new ProficiencyResponseDto
+        {
+            Id = p.Id,
+            Band = p.Band,
+            Name = p.Name,
+            Skill = p.Skill,
+            Description = p.Description ?? string.Empty
+        })
+        .ToListAsync();
+
+            return proficiencyList;
+        }
+
     }
 }

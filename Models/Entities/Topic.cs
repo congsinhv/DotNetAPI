@@ -19,5 +19,6 @@ namespace DotnetAPIProject.Models.Entities
 
         [ForeignKey("ProficienciesId")]
         public virtual Proficiency Proficiency { get; set; }
+        public ICollection<Exam> Exams { get; set; } = new List<Exam>();
     }
 } 

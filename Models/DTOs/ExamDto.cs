@@ -5,8 +5,9 @@
         public Guid IdExam { get; set; }
         public string NameExam { get; set; }
         public Guid TopicID { get; set; }
+        public double Time {  get; set; }   
         public string TopicName { get; set; }
-
+        public string Skill { get; set; }
     }
 
     public class ExamHaveAnswerResponseDto
