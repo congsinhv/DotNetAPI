@@ -32,6 +32,7 @@ namespace DotnetAPIProject.Services.Implementations
                     NameExam = qs.Name,
                     TopicID = qs.TopicId,
                     TopicName = qs.Topic.Name,
+                    Skill = qs.Skill,
                
                 });
 
@@ -96,7 +97,7 @@ namespace DotnetAPIProject.Services.Implementations
             Topic = topic,
             Time = exam.Time,
             Skill = exam.Skill,
-            questions = questions.ToList()
+            questions = questions.ToList()  
         };
     }
        

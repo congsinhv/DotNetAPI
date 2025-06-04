@@ -1,4 +1,4 @@
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DotnetAPIProject.Models.Entities
@@ -19,5 +19,7 @@ namespace DotnetAPIProject.Models.Entities
 
         [Column(TypeName = "NVARCHAR(MAX)")]
         public string TypeQuestion { get; set; } = string.Empty;
+        public virtual QuestionText QuestionText { get; set; } // Quan hệ 1:1
+        public virtual QuestionImage QuestionImages { get; set; } // 1:1
     }
 } 

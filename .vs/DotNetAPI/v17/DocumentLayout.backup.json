@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "E:\\Code\\BE English\\DotNetAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\code\\be english\\dotnetapi\\controllers\\topiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:controllers\\topiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\code\\be english\\dotnetapi\\controllers\\questionpicturecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:controllers\\questionpicturecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\code\\be english\\dotnetapi\\services\\implementations\\topicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:services\\implementations\\topicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\code\\be english\\dotnetapi\\services\\implementations\\questionpictureservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:services\\implementations\\questionpictureservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\code\\be english\\dotnetapi\\controllers\\proficiencycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:controllers\\proficiencycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\code\\be english\\dotnetapi\\services\\interfaces\\iquestionpictureservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:services\\interfaces\\iquestionpictureservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\code\\be english\\dotnetapi\\services\\implementations\\proficiencyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:services\\implementations\\proficiencyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\code\\be english\\dotnetapi\\models\\dtos\\questionpicturedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|solutionrelative:models\\dtos\\questionpicturedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A772132E-A627-F67C-5C82-166354C7D362}|DotnetAPIProject.csproj|e:\\code\\be english\\dotnetapi\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Document",
@@ -40,36 +40,10 @@
               "RelativeDocumentMoniker": ".env",
               "ToolTip": "E:\\Code\\BE English\\DotNetAPI\\.env",
               "RelativeToolTip": ".env",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAABLAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAABeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-05-31T04:22:47.178Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TopicController.cs",
-              "DocumentMoniker": "E:\\Code\\BE English\\DotNetAPI\\Controllers\\TopicController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TopicController.cs",
-              "ToolTip": "E:\\Code\\BE English\\DotNetAPI\\Controllers\\TopicController.cs*",
-              "RelativeToolTip": "Controllers\\TopicController.cs*",
-              "ViewState": "AgIAACEAAAAAAAAAAAAowCsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T06:38:06.886Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TopicService.cs",
-              "DocumentMoniker": "E:\\Code\\BE English\\DotNetAPI\\Services\\Implementations\\TopicService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\TopicService.cs",
-              "ToolTip": "E:\\Code\\BE English\\DotNetAPI\\Services\\Implementations\\TopicService.cs",
-              "RelativeToolTip": "Services\\Implementations\\TopicService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T06:36:18.799Z",
               "EditorCaption": ""
             },
             {
@@ -107,27 +81,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ProficiencyService.cs",
-              "DocumentMoniker": "E:\\Code\\BE English\\DotNetAPI\\Services\\Implementations\\ProficiencyService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\ProficiencyService.cs",
-              "ToolTip": "E:\\Code\\BE English\\DotNetAPI\\Services\\Implementations\\ProficiencyService.cs",
-              "RelativeToolTip": "Services\\Implementations\\ProficiencyService.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAwwDsAAAAAAAAAAAAAAA==",
+              "Title": "QuestionPictureDto.cs",
+              "DocumentMoniker": "E:\\Code\\BE English\\DotNetAPI\\Models\\DTOs\\QuestionPictureDto.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\QuestionPictureDto.cs",
+              "ToolTip": "E:\\Code\\BE English\\DotNetAPI\\Models\\DTOs\\QuestionPictureDto.cs",
+              "RelativeToolTip": "Models\\DTOs\\QuestionPictureDto.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwCcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T06:29:55.194Z",
+              "WhenOpened": "2025-06-04T06:08:31.039Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ProficiencyController.cs",
-              "DocumentMoniker": "E:\\Code\\BE English\\DotNetAPI\\Controllers\\ProficiencyController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProficiencyController.cs",
-              "ToolTip": "E:\\Code\\BE English\\DotNetAPI\\Controllers\\ProficiencyController.cs",
-              "RelativeToolTip": "Controllers\\ProficiencyController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowCUAAAAAAAAAAAAAAA==",
+              "Title": "IQuestionPictureService.cs",
+              "DocumentMoniker": "E:\\Code\\BE English\\DotNetAPI\\Services\\Interfaces\\IQuestionPictureService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IQuestionPictureService.cs",
+              "ToolTip": "E:\\Code\\BE English\\DotNetAPI\\Services\\Interfaces\\IQuestionPictureService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IQuestionPictureService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T06:15:02.231Z",
+              "WhenOpened": "2025-06-04T05:40:21.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "QuestionPictureService.cs",
+              "DocumentMoniker": "E:\\Code\\BE English\\DotNetAPI\\Services\\Implementations\\QuestionPictureService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\QuestionPictureService.cs",
+              "ToolTip": "E:\\Code\\BE English\\DotNetAPI\\Services\\Implementations\\QuestionPictureService.cs",
+              "RelativeToolTip": "Services\\Implementations\\QuestionPictureService.cs",
+              "ViewState": "AgIAAKsAAAAAAAAAAAAIwLcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T05:40:17.622Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "QuestionPictureController.cs",
+              "DocumentMoniker": "E:\\Code\\BE English\\DotNetAPI\\Controllers\\QuestionPictureController.cs",
+              "RelativeDocumentMoniker": "Controllers\\QuestionPictureController.cs",
+              "ToolTip": "E:\\Code\\BE English\\DotNetAPI\\Controllers\\QuestionPictureController.cs",
+              "RelativeToolTip": "Controllers\\QuestionPictureController.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAIwFQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T05:37:55.577Z",
               "EditorCaption": ""
             }
           ]

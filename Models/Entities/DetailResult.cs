@@ -20,7 +20,7 @@ namespace DotnetAPIProject.Models.Entities
         public Guid QuestionId { get; set; }
 
         [ForeignKey("ResultId")]
-        public virtual ResultUserExam ResultUserExam { get; set; }
+        public virtual UserExam ResultUserExam { get; set; }
 
         [ForeignKey("AnswerId")]
         public virtual Answer Answer { get; set; }

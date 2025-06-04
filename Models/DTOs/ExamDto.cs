@@ -6,6 +6,7 @@
         public string NameExam { get; set; }
         public Guid TopicID { get; set; }
         public string TopicName { get; set; }
+        public string Skill { get; set; }
 
     }
 
