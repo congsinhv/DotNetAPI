@@ -9,8 +9,9 @@ namespace DotnetAPIProject.Models.DTOs
         [Required, MaxLength(100)]
         public string Name { get; set; }
 
-        [MaxLength(255)]
         public string Description { get; set; }
+
+        public string? Skill { get; set; } = string.Empty;
     }
 
     public class ProficiencyResponseDto
@@ -19,5 +20,14 @@ namespace DotnetAPIProject.Models.DTOs
         public required string Name { get; set; }
         public required string Band { get; set; }
         public required string Description { get; set; }
+        public string? Skill { get; set; }
+    }
+
+    public class CreateProficiencyDto
+    {
+        public string Band { get; set; } = string.Empty;
+        public string Name { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+        public string? Skill { get; set; } = string.Empty;
     }
 }

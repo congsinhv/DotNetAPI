@@ -13,4 +13,9 @@
         public ProficiencyResponseDto Proficiency { get; set; }
     }
 
+    public class CreateTopicDto
+    {
+        public string TopicName { get; set; }
+        public Guid ProficiencyId { get; set; }
+    }
 }

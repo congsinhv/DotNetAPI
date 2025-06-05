@@ -131,6 +131,11 @@ builder.Services.AddScoped<IWorkspaceService, WorkspaceService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<IAnswerService, AnswerService>();
 builder.Services.AddScoped<IQuestionService, QuestionService>();
+builder.Services.AddScoped<IListeningExamService, ListeningExamService>();
+builder.Services.AddScoped<IListeningQuestion, ListeningQuestionService>();
+builder.Services.AddScoped<IDetailUserExamService, DetailUserExamService>();
+builder.Services.AddScoped<IUserExamService, UserExamService>();
+
 // builder.Services.AddScoped<ILoginService, LoginService>();
 
 //builder.Services.AddScoped<IForgotPasswordService, ForgotPasswordService>();

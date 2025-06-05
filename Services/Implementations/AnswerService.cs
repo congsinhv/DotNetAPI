@@ -47,7 +47,7 @@ public class AnswerService : IAnswerService
         };
     }
 
-    public async Task<List<AnswerResponseDto>> GetAnswersByQuestionIdAsync(Guid questionId)
+    public async Task<List<AnswerResponseDto>> GetAnswersByQuestionIdAsync(Guid questionId, bool? includeCorrect = false)
     {
         var answers = await _context.Answers
             .AsNoTracking()
@@ -56,9 +56,12 @@ public class AnswerService : IAnswerService
             {
                 Id = x.Id,
                 Symbol = x.Symbol,
-                Description = x.Description
+                Description = x.Description,
+                IsCorrect = includeCorrect == true ? x.IsCorrect : null
             })
             .ToListAsync();
+        
+        Console.WriteLine($"Retrieved {includeCorrect} {answers[0].IsCorrect}");
         return answers;
     }
 

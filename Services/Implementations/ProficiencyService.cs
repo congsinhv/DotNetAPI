@@ -23,7 +23,8 @@ namespace DotnetAPIProject.Services.Implementations
                 Id = Guid.NewGuid(),
                 Band = dto.Band,
                 Name = dto.Name,
-                Description = dto.Description
+                Description = dto.Description,
+                Skill = dto.Skill ?? string.Empty
             };
 
             _context.Proficiencies.Add(entity);
@@ -34,7 +35,8 @@ namespace DotnetAPIProject.Services.Implementations
                 Id = entity.Id,
                 Band = entity.Band,
                 Name = entity.Name,
-                Description = entity.Description
+                Description = entity.Description,
+                Skill = entity.Skill ?? string.Empty
             };
         }
         public async Task<List<ProficiencyResponseDto>> GetAllAsync()
@@ -54,6 +56,26 @@ namespace DotnetAPIProject.Services.Implementations
                     Name = p.Name,
                     Description = p.Description
                 }).ToListAsync();
+        }
+
+        public async Task<List<ProficiencyResponseDto>> GetProficienciesBySkillAsync(string skill)
+        {
+            var proficiencies = await _context.Proficiencies
+                .Where(p => p.Skill.Contains(skill))
+                .ToListAsync();
+            if (proficiencies == null || !proficiencies.Any())
+            {
+                return null;
+            }
+
+            return proficiencies.Select(p => new ProficiencyResponseDto
+            {
+                Id = p.Id,
+                Band = p.Band,
+                Name = p.Name,
+                Description = p.Description,
+                Skill = p.Skill
+            }).ToList();
         }
 
         public async Task<Proficiency> GetProficiencyByIdAsync(Guid proficiencyId)
