@@ -10,13 +10,13 @@ namespace DotnetAPIProject.Models.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
 
-        [Required]
-        public double FinishedTime { get; set; }
+        // [Required]
+        public double? FinishedTime { get; set; }    
 
         public double? OverallScore { get; set; }
 
-        [Required]
-        public required string Status { get; set; }
+        // [Required]
+        public  string? Status { get; set; }
 
         public DateTime? CreatedAt { get; set; } = DateTime.UtcNow;
 

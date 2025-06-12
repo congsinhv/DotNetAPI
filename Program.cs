@@ -13,6 +13,21 @@ using Microsoft.OpenApi.Models;
 // Load environment variables from .env file
 DotEnv.Load(options: new DotEnvOptions(probeLevelsToSearch: 3));
 
+// Set Google Application Credentials path if not already set
+if (string.IsNullOrEmpty(Environment.GetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS")))
+{
+    var credentialsPath = Path.Combine(Directory.GetCurrentDirectory(), "gg_credential.json");
+    if (File.Exists(credentialsPath))
+    {
+        Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", credentialsPath);
+        Console.WriteLine($"✅ Google Application Credentials set to: {credentialsPath}");
+    }
+    else
+    {
+        Console.WriteLine("⚠️ Google Application Credentials file not found at expected location");
+    }
+}
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Configure logging first
@@ -149,6 +164,7 @@ builder.Services.AddControllers();
 builder.Services.AddScoped<IProficiencyService, ProficiencyService>();
 builder.Services.AddScoped<ITopicService, TopicService>();
 builder.Services.AddScoped<IExamsService, ExamService>();
+builder.Services.AddScoped<IQuestionPictureService, QuestionPictureService>();
 
 // Add OpenAPI
 builder.Services.AddOpenApi();

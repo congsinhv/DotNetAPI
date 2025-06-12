@@ -68,6 +68,7 @@ namespace DotnetAPIProject.Services.Implementations
             {
                 IdExam = exam.Id,
                 NameExam = exam.Name,
+                Skill = exam.Skill,
                 Topic = new TopicDto
                 {
                     IdTopic = exam.TopicId,

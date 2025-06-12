@@ -32,6 +32,12 @@ public class ApplicationDbContext : DbContext
     public DbSet<ListeningQuestion> ListeningQuestions { get; set; } = null!;
     public DbSet<DetailUserExam> DetailUserExams { get; set; } = null!;
     public DbSet<UserExam> UserExams { get; set; } = null!;
+ 
+ 
+    public DbSet<QuestionImage> QuestionImages { get; set; }
+    public DbSet<QuestionText> QuestionText { get; set; }
+   
+ 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);

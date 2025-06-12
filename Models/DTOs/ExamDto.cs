@@ -24,7 +24,7 @@ namespace DotnetAPIProject.Models.DTOs
     {
         public Guid Id { get; set; }
         public required string Name { get; set; }
-        public required double Time { get; set; }
+        public double? Time { get; set; }
         public required string Skill { get; set; }
         public TopicDto Topic { get; set; }
         public ListeningInforDto Infor { get; set; }
