@@ -10,22 +10,22 @@ namespace DotnetAPIProject.Models.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
 
-        [Required]
+         [Required]
         [MaxLength(100)]
         public string Name { get; set; } = string.Empty;
 
-        [Required]
+        // [Required]
         public Guid TopicId { get; set; }
 
-        [Required]
-        public double Time { get; set; }
+        // [Required]
+        public double? Time { get; set; }
 
-        [Required]
+        // [Required]
         [MaxLength(50)]
-        public string Skill { get; set; } = string.Empty;
+        public string? Skill { get; set; } = string.Empty;
 
-        [Required]
-        public DateTime CreatedAt { get; set; } = DateTime.Now;
+        // [Required]
+        public DateTime? CreatedAt { get; set; } = DateTime.Now;
 
         public DateTime? UpdatedAt { get; set; }
 

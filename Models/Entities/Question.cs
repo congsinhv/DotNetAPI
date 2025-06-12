@@ -10,14 +10,16 @@ namespace DotnetAPIProject.Models.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
 
-        [Required]
-        public required string Content { get; set; } = string.Empty;
+        // [Required]
+        public string? Content { get; set; } = string.Empty;
 
 
         [ForeignKey("ExamId")]
-        public required Guid ExamId { get; set; }
+        public  Guid? ExamId { get; set; }
 
         [Column(TypeName = "NVARCHAR(MAX)")]
-        public string TypeQuestion { get; set; } = string.Empty;
+        public string? TypeQuestion { get; set; } = string.Empty;
+        public virtual QuestionText QuestionText { get; set; } // Quan hệ 1:1
+        public virtual QuestionImage QuestionImages { get; set; } // 1:1
     }
 } 

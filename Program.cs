@@ -164,6 +164,7 @@ builder.Services.AddControllers();
 builder.Services.AddScoped<IProficiencyService, ProficiencyService>();
 builder.Services.AddScoped<ITopicService, TopicService>();
 builder.Services.AddScoped<IExamsService, ExamService>();
+builder.Services.AddScoped<IQuestionPictureService, QuestionPictureService>();
 
 // Add OpenAPI
 builder.Services.AddOpenApi();
