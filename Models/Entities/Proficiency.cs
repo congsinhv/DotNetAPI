@@ -18,7 +18,8 @@ namespace DotnetAPIProject.Models.Entities
         [MaxLength(100)]
         public string Name { get; set; } = string.Empty;
 
-        [MaxLength(255)]
         public string Description { get; set; } = string.Empty;
+
+        public string Skill { get; set; } = string.Empty;
     }
 } 
