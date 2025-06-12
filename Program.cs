@@ -16,7 +16,7 @@ DotEnv.Load(options: new DotEnvOptions(probeLevelsToSearch: 3));
 // Set Google Application Credentials path if not already set
 if (string.IsNullOrEmpty(Environment.GetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS")))
 {
-    var credentialsPath = Path.Combine(Directory.GetCurrentDirectory(), "dotnet-api-4424a-72e9711bed58.json");
+    var credentialsPath = Path.Combine(Directory.GetCurrentDirectory(), "gg_credential.json");
     if (File.Exists(credentialsPath))
     {
         Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", credentialsPath);
