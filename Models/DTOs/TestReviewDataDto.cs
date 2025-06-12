@@ -13,7 +13,7 @@
         public string TestTitle { get; set; }
         public int TotalQuestions { get; set; }
         public int PdfId { get; set; }
-        public int TimeTakenSeconds { get; set; } // Added this property
+        public float TimeTakenSeconds { get; set; } // Added this property
         public List<ReviewResultDto> Results { get; set; }
     }
 }

@@ -18,7 +18,7 @@ namespace DotnetAPIProject.Models.Entities
         public Guid TopicId { get; set; }
 
         [Required]
-        public int Time { get; set; }
+        public double Time { get; set; }
 
         [Required]
         [MaxLength(50)]
