@@ -23,8 +23,8 @@ namespace DotnetAPIProject.Services.Implementations
                 Id = Guid.NewGuid(),
                 Band = dto.Band,
                 Name = dto.Name,
-                Skill= dto.Skill,
-                Description = dto.Description
+                Description = dto.Description,
+                Skill = dto.Skill ?? string.Empty
             };
 
             _context.Proficiencies.Add(entity);
@@ -35,13 +35,13 @@ namespace DotnetAPIProject.Services.Implementations
                 Id = entity.Id,
                 Band = entity.Band,
                 Name = entity.Name,
-                Skill = entity.Skill,
-                Description = entity.Description
+                Description = entity.Description,
+                Skill = entity.Skill ?? string.Empty
             };
         }
-      
-            // Get all proficiencies and map to ProficiencyResponseDto
-          public async Task<List<ProficiencyResponseDto>> GetAllAsync()
+
+        // Get all proficiencies and map to ProficiencyResponseDto
+        public async Task<List<ProficiencyResponseDto>> GetAllAsync()
         {
             // Get all proficiencies and map to ProficiencyResponseDto
             var proficiencyList = await _context.Proficiencies.ToListAsync();
@@ -59,6 +59,26 @@ namespace DotnetAPIProject.Services.Implementations
                     Skill = p.Skill,
                     Description = p.Description
                 }).ToListAsync();
+        }
+
+        public async Task<List<ProficiencyResponseDto>> GetProficienciesBySkillAsync(string skill)
+        {
+            var proficiencies = await _context.Proficiencies
+                .Where(p => p.Skill.Contains(skill))
+                .ToListAsync();
+            if (proficiencies == null || !proficiencies.Any())
+            {
+                return null;
+            }
+
+            return proficiencies.Select(p => new ProficiencyResponseDto
+            {
+                Id = p.Id,
+                Band = p.Band,
+                Name = p.Name,
+                Description = p.Description,
+                Skill = p.Skill
+            }).ToList();
         }
 
         public async Task<Proficiency> GetProficiencyByIdAsync(Guid proficiencyId)

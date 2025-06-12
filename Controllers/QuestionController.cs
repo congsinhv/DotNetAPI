@@ -53,4 +53,36 @@ public class QuestionController : ControllerBase
         }
         return Ok(questions);
     }
+
+    [HttpPost("listening")]
+    public async Task<ActionResult<ListeningQuestionResponseDto>> CreateListeningQuestion([FromBody] ListeningQuestionCreate createContent)
+    {
+       try{
+        var createdListeningQuestion = await _questionService.CreateListeningQuestionAsync(createContent);
+        if (createdListeningQuestion == null)
+        {
+            return BadRequest("Failed to create listening question.");
+        }
+        return Ok(createdListeningQuestion);
+       }
+       catch(Exception ex){
+        return StatusCode(500, $"An error occurred while creating the listening question: {ex.Message}");
+       }
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<QuestionHaveAnswerDto>> GetQuestionById(Guid id)
+    {
+        try{
+            var question = await _questionService.GetQuestionByIdAsync(id); 
+            if (question == null)
+            {
+                return NotFound("Question not found");
+            }
+            return Ok(question);
+        }
+        catch(Exception ex){
+            return StatusCode(500, $"An error occurred while getting the question: {ex.Message}");
+        }
+    }
 }

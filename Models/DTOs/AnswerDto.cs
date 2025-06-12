@@ -14,6 +14,7 @@ namespace DotnetAPIProject.Models.DTOs
         public Guid Id { get; set; }
         public required string Symbol { get; set; }
         public required string Description { get; set; }
+        public bool? IsCorrect { get; set; }
     }
 
     public class AnswerCreate

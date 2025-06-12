@@ -11,26 +11,21 @@ namespace DotnetAPIProject.Models.Entities
         public Guid Id { get; set; }
 
         [Required]
-        public Guid UserId { get; set; }
+        public double FinishedTime { get; set; }
+
+        public double? OverallScore { get; set; }
 
         [Required]
-        public Guid ExamId { get; set; }
+        public required string Status { get; set; }
 
-        [Required]
-        public DateTime FinishedTime { get; set; }
+        public DateTime? CreatedAt { get; set; } = DateTime.UtcNow;
 
-        [Required]
-        public double OverallScore { get; set; }
-
-        [Required]
-        public DateTime CreatedAt { get; set; } = DateTime.Now;
-
-        public DateTime? UpdatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; } = DateTime.UtcNow;
 
         [ForeignKey("UserId")]
-        public virtual Account Account { get; set; }
+        public Guid UserId { get; set; }
 
         [ForeignKey("ExamId")]
-        public virtual Exam Exam { get; set; }
+        public Guid ExamId { get; set; }
     }
-} 
+}
