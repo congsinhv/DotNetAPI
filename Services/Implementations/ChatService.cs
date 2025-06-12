@@ -135,7 +135,6 @@ public class ChatService : IChatService, IDisposable
     {
         _conversationHistory.Add(new { role, content });
 
-        // Keep only the last 20 messages to limit memory usage
         if (_conversationHistory.Count > 20)
             _conversationHistory.RemoveAt(0);
     }
@@ -144,7 +143,7 @@ public class ChatService : IChatService, IDisposable
     {
         return new
         {
-            model = "google/gemini-2.0-flash-thinking-exp:free",
+            model = "google/gemma-3n-e4b-it:free",
             messages = _conversationHistory
         };
     }
@@ -153,12 +152,17 @@ public class ChatService : IChatService, IDisposable
     {
         var jsonContent = JsonSerializer.Serialize(requestBody);
         var response = await _httpClient.PostAsync(
-            "https://openrouter.ai/api/v1/chat/completions", // Replace with actual API URL
+            "https://openrouter.ai/api/v1/chat/completions",
             new StringContent(jsonContent, Encoding.UTF8, "application/json")
         );
 
         if (!response.IsSuccessStatusCode)
+        {
+            var errorContent = await response.Content.ReadAsStringAsync();
+            Console.WriteLine($"API Error: Status {response.StatusCode}");
+            Console.WriteLine($"Error Content: {errorContent}");
             return null;
+        }
 
         var responseContent = await response.Content.ReadAsStringAsync();
         var aiResponse = DeserializeApiResponse(responseContent);
