@@ -43,7 +43,7 @@ public class QuestionController : ControllerBase
         }
     }
 
-    [HttpGet("{/QuestionsPicture/examId}")]
+    [HttpGet("/QuestionsPicture/{examId}")]
     public async Task<ActionResult<IEnumerable<QuestionNoAnswerDto>>> GetAllQuestionsByExamId(Guid examId)
     {
         var questions = await _questionService.GetAllQuestionsByExamIdAsync(examId);
