@@ -7,7 +7,7 @@ namespace DotnetAPIProject.Models.DTOs
         public Guid IdExam { get; set; }
         public string NameExam { get; set; }
         public TopicDto Topic { get; set; }
-        public int Time { get; set; }
+        public double Time { get; set; }
         public string Skill { get; set; }
     }
 

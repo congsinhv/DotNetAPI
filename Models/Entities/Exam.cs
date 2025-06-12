@@ -33,4 +33,4 @@ namespace DotnetAPIProject.Models.Entities
         public virtual Topic Topic { get; set; }
         public ICollection<PdfDocument> PdfDocuments { get; set; } = new List<PdfDocument>();
     }
-} 
+}

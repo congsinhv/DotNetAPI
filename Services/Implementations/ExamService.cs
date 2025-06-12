@@ -202,7 +202,7 @@ namespace DotnetAPIProject.Services.Implementations
                     Id = createdExam.IdExam,
                     Name = createdExam.NameExam,
                     Topic = createdExam.Topic,
-                    Time = createdExam.Time,
+                    //Time = createdExam.Time,
                     Skill = createdExam.Skill,
                     Infor = listeningInfor,
                 };
