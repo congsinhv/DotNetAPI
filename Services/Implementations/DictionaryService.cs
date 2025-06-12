@@ -23,7 +23,7 @@ public class DictionaryService : IDictionaryService
         _baseUrl = Environment.GetEnvironmentVariable("OXFORD_DICTIONARY_BASE_URL") ?? "dummy";
         
         // Set the Google Application Credentials path to the correct location
-        var credentialsPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "dotnet-api-4424a-72e9711bed58.json");
+        var credentialsPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "gg_credential.json");
         credentialsPath = Path.GetFullPath(credentialsPath);
         
         if (File.Exists(credentialsPath))
@@ -33,7 +33,7 @@ public class DictionaryService : IDictionaryService
         else
         {
             // Fallback: try the current directory
-            var fallbackPath = "dotnet-api-4424a-72e9711bed58.json";
+            var fallbackPath = "gg_credential.json";
             if (File.Exists(fallbackPath))
             {
                 Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", Path.GetFullPath(fallbackPath));
