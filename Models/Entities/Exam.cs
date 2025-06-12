@@ -31,5 +31,6 @@ namespace DotnetAPIProject.Models.Entities
 
         [ForeignKey("TopicId")]
         public virtual Topic Topic { get; set; }
+        public ICollection<PdfDocument> PdfDocuments { get; set; } = new List<PdfDocument>();
     }
-} 
+}

@@ -42,6 +42,7 @@ namespace DotnetAPIProject.Services.Implementations
                     Id = proficiency.Id,
                     Name = proficiency.Name,
                     Band = proficiency.Band,
+                    Skill= proficiency.Skill,
                     Description = proficiency.Description
                 }
 
@@ -84,6 +85,7 @@ namespace DotnetAPIProject.Services.Implementations
                     Id = proficiency.Id,
                     Name = proficiency.Name,
                     Band = proficiency.Band,
+                    Skill =proficiency.Skill,
                     Description = proficiency.Description
                 }
             };

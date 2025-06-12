@@ -23,7 +23,7 @@ namespace DotnetAPIProject.Services.Implementations
             _questionService = questionService;
             _listeningExamService = listeningExamService;
         }
-      
+
         public async Task<IEnumerable<ExamDto>> GetExamAsync(Guid? topicId)
         {
             var query = _context.Exams
@@ -76,7 +76,7 @@ namespace DotnetAPIProject.Services.Implementations
                 }
             };
         }
-        
+
         public async Task<IEnumerable<ListeningExamResponseDto>> GetListeningExamByProficiencyIdAsync(Guid proficiencyId)
         {
             try
@@ -85,10 +85,10 @@ namespace DotnetAPIProject.Services.Implementations
                 var query = from e in _context.Exams
                             join t in _context.Topics on e.TopicId equals t.Id
                             join p in _context.Proficiencies on t.ProficienciesId equals p.Id
-                            where p.Id == proficiencyId 
-                                && t.Name == "All" 
+                            where p.Id == proficiencyId
+                                && t.Name == "All"
                                 && e.Skill.ToLower() == "listening"
-                            select new 
+                            select new
                             {
                                 Exam = e,
                                 Topic = t
@@ -97,11 +97,12 @@ namespace DotnetAPIProject.Services.Implementations
                 var exams = await query.ToListAsync();
 
                 // Join exams with their ListeningExam info
-                var result = await Task.WhenAll(exams.Select(async x => {
+                var result = await Task.WhenAll(exams.Select(async x =>
+                {
                     var listeningInfo = await _context.ListeningExams.FirstOrDefaultAsync(le => le.ExamId == x.Exam.Id);
                     var proficiency = await _proficiencyService.GetProficiencyByIdAsync(proficiencyId);
                     var questions = await _questionService.GetAllQuestionsByExamIdAsync(x.Exam.Id);
-                    
+
                     return new ListeningExamResponseDto
                     {
                         Id = x.Exam.Id,
@@ -140,7 +141,7 @@ namespace DotnetAPIProject.Services.Implementations
             }
         }
 
-      
+
         public async Task<ListeningExamHaveAnswerResponseDto> GetDetailListeningExamByIdAsync(Guid examId)
         {
             var exam = await _context.Exams.FirstOrDefaultAsync(e => e.Id == examId);
@@ -162,7 +163,7 @@ namespace DotnetAPIProject.Services.Implementations
             var listeningQuestions = await _questionService.GetAllListeningQuestionsByExamIdAsync(examId);
 
             Console.WriteLine(listeningQuestions.Count());
-    
+
             return new ListeningExamHaveAnswerResponseDto
             {
                 Id = exam.Id,
@@ -183,7 +184,8 @@ namespace DotnetAPIProject.Services.Implementations
 
         public async Task<ListeningExamResponseDto> CreateListeningExamAsync(ListeningExamCreateDto listeningExamDto)
         {
-            try{
+            try
+            {
                 var exam = new CreateExamDto
                 {
                     NameExam = listeningExamDto.Name,
@@ -193,7 +195,7 @@ namespace DotnetAPIProject.Services.Implementations
                 };
 
                 var createdExam = await CreateExamAsync(exam);
-                
+
                 var listeningInfor = await _listeningExamService.CreateListeningExamInforAsync(createdExam.IdExam, listeningExamDto.Infor);
 
                 var listeningExam = new ListeningExamResponseDto
@@ -201,14 +203,15 @@ namespace DotnetAPIProject.Services.Implementations
                     Id = createdExam.IdExam,
                     Name = createdExam.NameExam,
                     Topic = createdExam.Topic,
-                    Time = createdExam.Time,
+                    //Time = createdExam.Time,
                     Skill = createdExam.Skill,
                     Infor = listeningInfor,
                 };
 
                 return listeningExam;
             }
-            catch(Exception ex){
+            catch (Exception ex)
+            {
                 throw new Exception(ex.Message);
             }
         }

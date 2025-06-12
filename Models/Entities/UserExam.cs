@@ -23,7 +23,7 @@ namespace DotnetAPIProject.Models.Entities
         public DateTime? UpdatedAt { get; set; } = DateTime.UtcNow;
 
         [ForeignKey("UserId")]
-         public Guid UserId { get; set; }
+        public Guid UserId { get; set; }
 
         [ForeignKey("ExamId")]
         public Guid ExamId { get; set; }

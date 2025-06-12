@@ -45,7 +45,8 @@ namespace DotnetAPIProject.Controllers
             try
             {
                 var result = await _examService.CreateExamAsync(examDto);
-                if(result == null){
+                if (result == null)
+                {
                     return BadRequest("Failed to create exam.");
                 }
                 return Ok(result);
@@ -59,9 +60,11 @@ namespace DotnetAPIProject.Controllers
         [HttpGet("listening/{examId}")]
         public async Task<ActionResult<ListeningExamHaveAnswerResponseDto>> GetDetailListeningExamByIdAsync([FromRoute] Guid examId)
         {
-            try{
+            try
+            {
                 var exam = await _examService.GetDetailListeningExamByIdAsync(examId);
-                if(exam == null){
+                if (exam == null)
+                {
                     return NotFound("Listening exam not found.");
                 }
                 return Ok(exam);
@@ -89,13 +92,16 @@ namespace DotnetAPIProject.Controllers
         [HttpGet("listenings")]
         public async Task<ActionResult<IEnumerable<ListeningExamResponseDto>>> GetListeningExam([FromQuery] Guid proficiencyId)
         {
-            try{
+            try
+            {
                 var proficiency = await _proficiencyService.GetProficiencyByIdAsync(proficiencyId);
-                if(proficiency == null){
+                if (proficiency == null)
+                {
                     return NotFound("Proficiency not found.");
                 }
                 var result = await _examService.GetListeningExamByProficiencyIdAsync(proficiencyId);
-                if(result == null || !result.Any()){
+                if (result == null || !result.Any())
+                {
                     return Ok(new List<ListeningExamResponseDto>());
                 }
                 return Ok(result);
@@ -109,18 +115,19 @@ namespace DotnetAPIProject.Controllers
         [HttpDelete("{examId}")]
         public async Task<IActionResult> DeleteExam([FromRoute] Guid examId)
         {
-           try{
-            var result = await _examService.DeleteExamByIdAsync(examId);
-            if (result)
+            try
             {
-                return Ok("Exam deleted successfully.");
+                var result = await _examService.DeleteExamByIdAsync(examId);
+                if (result)
+                {
+                    return Ok("Exam deleted successfully.");
+                }
+                return BadRequest("Failed to delete exam.");
             }
-            return BadRequest("Failed to delete exam.");
-           }
-           catch (Exception ex)
-           {
+            catch (Exception ex)
+            {
                 return StatusCode(500, ex.Message);
-           }
+            }
         }
     }
 }

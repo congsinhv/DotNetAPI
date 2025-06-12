@@ -7,7 +7,7 @@ namespace DotnetAPIProject.Models.DTOs
         public Guid IdExam { get; set; }
         public string NameExam { get; set; }
         public TopicDto Topic { get; set; }
-        public int Time { get; set; }
+        public double Time { get; set; }
         public string Skill { get; set; }
     }
 
@@ -31,7 +31,8 @@ namespace DotnetAPIProject.Models.DTOs
         public List<ListeningQuestionResponseDto> questions { get; set; } = new List<ListeningQuestionResponseDto>();
     }
 
-    public class ListeningExamCreateDto{
+    public class ListeningExamCreateDto
+    {
         public string Name { get; set; }
         public Guid TopicId { get; set; }
         public int Time { get; set; }
@@ -39,7 +40,8 @@ namespace DotnetAPIProject.Models.DTOs
         public ListeningInforreateDto Infor { get; set; }
     }
 
-    public class ListeningExamResponseDto{
+    public class ListeningExamResponseDto
+    {
         public Guid Id { get; set; }
         public string Name { get; set; }
         public TopicDto Topic { get; set; }

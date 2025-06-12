@@ -16,10 +16,40 @@ namespace DotnetAPIProject.Controllers
         }
 
         [HttpGet("Proficiency")]
-        public async Task<ActionResult<IEnumerable<Proficiency>>> GetLevel()
+        public async Task<ActionResult> GetLevel()
         {
-            var proficiency = await _proficiencyService.GetAllAsync();
-            return Ok(proficiency);
+            try
+            {
+                var proficiencies = await _proficiencyService.GetAllAsync();
+                if (!proficiencies.Any())
+                {
+                    return NotFound("No proficiencies found with Skill 'Listening'.");
+                }
+                return Ok(proficiencies);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error retrieving proficiencies: {ex}");
+                return StatusCode(500, $"Lỗi khi lấy danh sách band: {ex.Message}");
+            }
+        }
+        [HttpGet("Proficiency-raeding")]
+        public async Task<ActionResult> GetLevelReading()
+        {
+            try
+            {
+                var proficiencies = await _proficiencyService.GetAllReading();
+                if (!proficiencies.Any())
+                {
+                    return NotFound("No proficiencies found with Skill 'Listening'.");
+                }
+                return Ok(proficiencies);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error retrieving proficiencies: {ex}");
+                return StatusCode(500, $"Lỗi khi lấy danh sách band: {ex.Message}");
+            }
         }
         // add
 
