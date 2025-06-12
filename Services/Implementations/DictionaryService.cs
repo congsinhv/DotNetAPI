@@ -21,6 +21,25 @@ public class DictionaryService : IDictionaryService
         _context = context;
         _httpClientFactory = httpClientFactory;
         _baseUrl = Environment.GetEnvironmentVariable("OXFORD_DICTIONARY_BASE_URL") ?? "dummy";
+        
+        // Set the Google Application Credentials path to the correct location
+        var credentialsPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "dotnet-api-4424a-72e9711bed58.json");
+        credentialsPath = Path.GetFullPath(credentialsPath);
+        
+        if (File.Exists(credentialsPath))
+        {
+            Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", credentialsPath);
+        }
+        else
+        {
+            // Fallback: try the current directory
+            var fallbackPath = "dotnet-api-4424a-72e9711bed58.json";
+            if (File.Exists(fallbackPath))
+            {
+                Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", Path.GetFullPath(fallbackPath));
+            }
+        }
+        
         _translationClient = TranslationClient.Create();
     }
 

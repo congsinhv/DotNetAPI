@@ -13,6 +13,21 @@ using Microsoft.OpenApi.Models;
 // Load environment variables from .env file
 DotEnv.Load(options: new DotEnvOptions(probeLevelsToSearch: 3));
 
+// Set Google Application Credentials path if not already set
+if (string.IsNullOrEmpty(Environment.GetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS")))
+{
+    var credentialsPath = Path.Combine(Directory.GetCurrentDirectory(), "dotnet-api-4424a-72e9711bed58.json");
+    if (File.Exists(credentialsPath))
+    {
+        Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", credentialsPath);
+        Console.WriteLine($"✅ Google Application Credentials set to: {credentialsPath}");
+    }
+    else
+    {
+        Console.WriteLine("⚠️ Google Application Credentials file not found at expected location");
+    }
+}
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Configure logging first
