@@ -144,7 +144,7 @@ public class ChatService : IChatService, IDisposable
     {
         return new
         {
-            model = "google/gemini-2.0-flash-thinking-exp:free",
+            model = "google/gemma-3n-e4b-it:free",
             messages = _conversationHistory
         };
     }
