@@ -43,6 +43,17 @@ namespace DotnetAPIProject.Controllers
             }
         }
 
+        [HttpGet("Proficiency/skill")]
+        public async Task<ActionResult<IEnumerable<ProficiencyResponseDto>>> GetProficienciesBySkill([FromQuery] string skill)
+        {
+            var proficiencies = await _proficiencyService.GetProficienciesBySkillAsync(skill);
+            if (proficiencies == null || !proficiencies.Any())
+            {
+                return Ok(new List<ProficiencyResponseDto>());
+            }
+            return Ok(proficiencies);
+        }
+
 
         [HttpGet("{idProficiency}")]
         public async Task<IActionResult> GetById(Guid idProficiency)
