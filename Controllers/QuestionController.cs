@@ -70,7 +70,7 @@ public class QuestionController : ControllerBase
        }
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("a{id}")]
     public async Task<ActionResult<QuestionHaveAnswerDto>> GetQuestionById(Guid id)
     {
         try{

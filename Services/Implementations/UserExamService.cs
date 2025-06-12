@@ -79,7 +79,7 @@ namespace DotnetAPIProject.Services.Implementations
                 var response = new UserExamDto
                 {
                     Id = userExam.Id,
-                    FinishedTime = userExam.FinishedTime,
+                    FinishedTime = userExam.FinishedTime.Value,
                     Status = userExam.Status,
                     ExamId = userExam.ExamId,
                     UserId = userExam.UserId,
@@ -140,7 +140,7 @@ namespace DotnetAPIProject.Services.Implementations
                 var response = new UserExamListeningResponseDto
                 {
                     Id = userExam.Id,
-                    FinishedTime = userExam.FinishedTime,
+                    FinishedTime = userExam.FinishedTime.Value,
                     Status = userExam.Status,
                     ListeningExam = new ListeningExamResponseDto
                     {
@@ -214,7 +214,7 @@ namespace DotnetAPIProject.Services.Implementations
                 var response = new UserExamDto
                 {
                     Id = userExam.Id,
-                    FinishedTime = userExam.FinishedTime,
+                    FinishedTime = userExam.FinishedTime.Value,
                     Status = userExam.Status,
                     ExamId = userExam.ExamId,
                     UserId = userExam.UserId,

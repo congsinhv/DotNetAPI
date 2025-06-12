@@ -10,16 +10,16 @@ namespace DotnetAPIProject.Models.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
 
-        [Required]
+        // [Required]
         [MaxLength(20)]
-        public string Band { get; set; } = string.Empty;
+        public string? Band { get; set; } = string.Empty;
 
-        [Required]
+        // [Required]
         [MaxLength(100)]
-        public string Name { get; set; } = string.Empty;
+        public string? Name { get; set; } = string.Empty;
 
-        public string Description { get; set; } = string.Empty;
+        public string? Description { get; set; } = string.Empty;
 
-        public string Skill { get; set; } = string.Empty;
+        public string? Skill { get; set; } = string.Empty;
     }
 } 
