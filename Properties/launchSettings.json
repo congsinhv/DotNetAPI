@@ -9,7 +9,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "GOOGLE_CLOUD_PROJECT_ID": "dotnet-api-4424a",
-        "GOOGLE_APPLICATION_CREDENTIALS": "D:/API/dotnet-api-4424a-72e9711bed58.json"
+        "GOOGLE_APPLICATION_CREDENTIALS": "gg_credential.json"
       }
     },
     "https": {
@@ -20,7 +20,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "GOOGLE_CLOUD_PROJECT_ID": "dotnet-api-4424a",
-        "GOOGLE_APPLICATION_CREDENTIALS": "D:/API/dotnet-api-4424a-72e9711bed58.json" // Sửa thành link json CREDENTIALS của google cloud trans
+        "GOOGLE_APPLICATION_CREDENTIALS": "gg_credential.json"
       }
     }
   }
